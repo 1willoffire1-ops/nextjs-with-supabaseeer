@@ -1,0 +1,4 @@
+invoice_id,date,vat_number,vat_rate,amount,description
+INV-001,2024-01-15,IE1234567X,23,1000.00,Consulting services
+INV-002,2024-01-16,IE7654321Y,23,2500.00,Software development
+INV-003,2024-01-17,IE9876543Z,13.5,500.00,Restaurant services
