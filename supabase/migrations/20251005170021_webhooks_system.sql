@@ -1,6 +1,6 @@
 -- Webhooks Table
 CREATE TABLE webhooks (
-  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   company_id UUID NOT NULL,
   url TEXT NOT NULL,
   events TEXT[] NOT NULL,
@@ -12,7 +12,7 @@ CREATE TABLE webhooks (
 
 -- Webhook Deliveries Table
 CREATE TABLE webhook_deliveries (
-  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   webhook_id UUID REFERENCES webhooks(id) ON DELETE CASCADE,
   event_type TEXT NOT NULL,
   payload JSONB NOT NULL,
@@ -27,7 +27,7 @@ CREATE TABLE webhook_deliveries (
 
 -- Webhook Events Queue (for async processing)
 CREATE TABLE webhook_events_queue (
-  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   company_id UUID NOT NULL,
   event_type TEXT NOT NULL,
   payload JSONB NOT NULL,

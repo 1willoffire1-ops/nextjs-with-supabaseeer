@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { reportGenerator } from '@/lib/services/reports/pdf-generator'
+import { reportGenerator, ComplianceReportPDF } from '@/lib/services/reports/pdf-generator'
 import { createRouteHandlerClient } from '@supabase/auth-helpers-nextjs'
 import { cookies } from 'next/headers'
 import { renderToStream } from '@react-pdf/renderer'
-import { ComplianceReportPDF } from '@/lib/services/reports/pdf-generator'
+import React from 'react'
 
 export async function POST(request: NextRequest) {
   try {
@@ -35,7 +35,7 @@ export async function POST(request: NextRequest) {
 
     // Render PDF to stream
     const pdfStream = await renderToStream(
-      <ComplianceReportPDF data={reportData} />
+      React.createElement(ComplianceReportPDF, { data: reportData })
     )
 
     // Convert stream to buffer

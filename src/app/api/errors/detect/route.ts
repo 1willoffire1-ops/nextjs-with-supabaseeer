@@ -46,7 +46,7 @@ export async function POST(request: NextRequest) {
         low_errors: errors.filter(e => e.severity === 'low').length,
         auto_fixable: errors.filter(e => e.auto_fixable).length,
         total_penalty_risk: errors.reduce((sum, e) => sum + (e.penalty_risk_eur || 0), 0),
-        by_type: this.groupErrorsByType(errors)
+        by_type: groupErrorsByType(errors)
       }
       
       console.log(`✅ Error detection completed: ${errors.length} errors found`)

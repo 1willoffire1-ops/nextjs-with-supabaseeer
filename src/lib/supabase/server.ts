@@ -1,4 +1,6 @@
-import { createClient } from '@supabase/supabase-js'
+import { createClient as createSupabaseClient } from '@supabase/supabase-js'
+import { createRouteHandlerClient } from '@supabase/auth-helpers-nextjs'
+import { cookies } from 'next/headers'
 import { Database } from '@/types/database'
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
@@ -9,15 +11,21 @@ if (!supabaseUrl || !supabaseServiceKey) {
 }
 
 // Server-side admin client for VATANA backend operations
-export const supabaseAdmin = createClient<Database>(supabaseUrl, supabaseServiceKey, {
+export const supabaseAdmin = createSupabaseClient<Database>(supabaseUrl, supabaseServiceKey, {
   auth: {
     autoRefreshToken: false,
     persistSession: false
   }
 })
 
+// Client factory for route handlers with user authentication
+export async function createClient() {
+  const cookieStore = await cookies()
+  return createRouteHandlerClient<Database>({ cookies: () => cookieStore })
+}
+
 // Health score calculation with caching
-let healthScoreCache = new Map<string, { score: number; timestamp: number }>()
+const healthScoreCache = new Map<string, { score: number; timestamp: number }>()
 const CACHE_DURATION = 60000 // 1 minute
 
 export const updateHealthScore = async (userId: string): Promise<number> => {

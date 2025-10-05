@@ -1,6 +1,6 @@
 -- Team Members Table
 CREATE TABLE team_members (
-  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   company_id UUID NOT NULL,
   user_id UUID REFERENCES users(id),
   email TEXT NOT NULL,
@@ -16,7 +16,7 @@ CREATE TABLE team_members (
 
 -- Team Invitations Table
 CREATE TABLE team_invitations (
-  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   company_id UUID NOT NULL,
   email TEXT NOT NULL,
   role TEXT NOT NULL,
@@ -29,7 +29,7 @@ CREATE TABLE team_invitations (
 
 -- Activity Log Table
 CREATE TABLE activity_log (
-  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   company_id UUID NOT NULL,
   user_id UUID REFERENCES users(id),
   action TEXT NOT NULL,
