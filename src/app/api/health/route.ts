@@ -1,31 +1,60 @@
 import { NextResponse } from 'next/server'
 import { supabaseAdmin } from '@/lib/supabase/server'
 
+export const dynamic = 'force-dynamic'
+
 export async function GET() {
+  const checks = {
+    status: 'healthy',
+    timestamp: new Date().toISOString(),
+    version: process.env.npm_package_version || '1.0.0',
+    environment: process.env.NODE_ENV,
+    uptime: process.uptime ? Math.floor(process.uptime()) : null,
+    checks: {
+      database: 'unknown',
+      api: 'unknown',
+      claude: 'unknown'
+    }
+  }
+
   try {
-    // Test database connection
-    const { data, error } = await supabaseAdmin
+    // Check database connection
+    const { data, error: dbError } = await supabaseAdmin
       .from('users')
-      .select('id')
+      .select('count')
       .limit(1)
+
+    checks.checks.database = dbError ? 'unhealthy' : 'healthy'
+
+    // Check if Claude API key is configured
+    checks.checks.claude = process.env.CLAUDE_API_KEY ? 'configured' : 'missing'
     
-    if (error) throw error
+    // Check if API is responsive
+    checks.checks.api = 'healthy'
+
+    // Overall health
+    const isHealthy = checks.checks.database === 'healthy' && 
+                     checks.checks.api === 'healthy' && 
+                     checks.checks.claude === 'configured'
     
-    return NextResponse.json({
-      status: 'healthy',
-      database: 'connected',
-      timestamp: new Date().toISOString(),
-      message: 'VATANA API is running! 🚀'
+    checks.status = isHealthy ? 'healthy' : 'degraded'
+
+    return NextResponse.json(checks, {
+      status: isHealthy ? 200 : 503,
+      headers: {
+        'Cache-Control': 'no-cache, no-store, must-revalidate',
+        'Content-Type': 'application/json'
+      }
     })
   } catch (error) {
     return NextResponse.json(
       {
+        ...checks,
         status: 'unhealthy',
-        database: 'error',
-        error: 'Database connection failed',
-        timestamp: new Date().toISOString()
+        error: 'Health check failed',
+        message: error instanceof Error ? error.message : 'Unknown error'
       },
-      { status: 500 }
+      { status: 503 }
     )
   }
 }
