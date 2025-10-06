@@ -6,15 +6,29 @@ import { Database } from '@/types/database'
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!
 
-if (!supabaseUrl || !supabaseServiceKey) {
-  throw new Error('Missing Supabase server environment variables')
+// Only validate environment variables at runtime, not build time
+function validateSupabaseConfig() {
+  if (!supabaseUrl || !supabaseServiceKey) {
+    throw new Error('Missing Supabase server environment variables')
+  }
 }
 
 // Server-side admin client for VATANA backend operations
-export const supabaseAdmin = createSupabaseClient<Database>(supabaseUrl, supabaseServiceKey, {
-  auth: {
-    autoRefreshToken: false,
-    persistSession: false
+// Create client lazily to avoid build-time validation issues
+let _supabaseAdmin: ReturnType<typeof createSupabaseClient<Database>> | null = null
+
+export const supabaseAdmin = new Proxy({} as ReturnType<typeof createSupabaseClient<Database>>, {
+  get(target, prop) {
+    if (!_supabaseAdmin) {
+      validateSupabaseConfig()
+      _supabaseAdmin = createSupabaseClient<Database>(supabaseUrl, supabaseServiceKey, {
+        auth: {
+          autoRefreshToken: false,
+          persistSession: false
+        }
+      })
+    }
+    return (_supabaseAdmin as any)[prop]
   }
 })
 
