@@ -10,8 +10,9 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  exclude: ['figma-plugin/**/*'],
   server: {
-    port: 3000,
+    port: 8080,
     open: true,
   },
   build: {
