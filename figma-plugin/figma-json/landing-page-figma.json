@@ -1,0 +1,824 @@
+{
+  "name": "VATANA Landing Page",
+  "type": "FRAME",
+  "width": 1440,
+  "height": 3000,
+  "backgroundColor": {
+    "r": 0.039,
+    "g": 0.055,
+    "b": 0.102,
+    "a": 1
+  },
+  "children": [
+    {
+      "name": "Header",
+      "type": "FRAME",
+      "width": 1440,
+      "height": 80,
+      "x": 0,
+      "y": 0,
+      "backgroundColor": {
+        "r": 0.039,
+        "g": 0.055,
+        "b": 0.102,
+        "a": 0.8
+      },
+      "children": [
+        {
+          "name": "Logo",
+          "type": "TEXT",
+          "x": 80,
+          "y": 26,
+          "characters": "VATANA",
+          "fontSize": 28,
+          "fontName": {
+            "family": "Manrope",
+            "style": "Bold"
+          },
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": {
+                "r": 0.078,
+                "g": 0.722,
+                "b": 0.651
+              }
+            }
+          ]
+        },
+        {
+          "name": "Nav Link - Features",
+          "type": "TEXT",
+          "x": 600,
+          "y": 30,
+          "characters": "Features",
+          "fontSize": 16,
+          "fontName": {
+            "family": "Manrope",
+            "style": "Regular"
+          },
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": {
+                "r": 0.804,
+                "g": 0.835,
+                "b": 0.875
+              }
+            }
+          ]
+        },
+        {
+          "name": "Nav Link - Pricing",
+          "type": "TEXT",
+          "x": 700,
+          "y": 30,
+          "characters": "Pricing",
+          "fontSize": 16,
+          "fontName": {
+            "family": "Manrope",
+            "style": "Regular"
+          },
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": {
+                "r": 0.804,
+                "g": 0.835,
+                "b": 0.875
+              }
+            }
+          ]
+        },
+        {
+          "name": "CTA Button",
+          "type": "FRAME",
+          "width": 180,
+          "height": 44,
+          "x": 1180,
+          "y": 18,
+          "cornerRadius": 8,
+          "backgroundColor": {
+            "r": 0.231,
+            "g": 0.510,
+            "b": 0.965,
+            "a": 1
+          },
+          "children": [
+            {
+              "name": "Button Text",
+              "type": "TEXT",
+              "x": 40,
+              "y": 12,
+              "characters": "Get Started",
+              "fontSize": 16,
+              "fontName": {
+                "family": "Manrope",
+                "style": "Bold"
+              },
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hero Section",
+      "type": "FRAME",
+      "width": 1440,
+      "height": 800,
+      "x": 0,
+      "y": 80,
+      "backgroundColor": {
+        "r": 0.039,
+        "g": 0.055,
+        "b": 0.102,
+        "a": 1
+      },
+      "children": [
+        {
+          "name": "Headline",
+          "type": "TEXT",
+          "x": 320,
+          "y": 300,
+          "characters": "Simplify VAT Compliance with AI",
+          "fontSize": 56,
+          "fontName": {
+            "family": "Manrope",
+            "style": "Bold"
+          },
+          "textAlignHorizontal": "CENTER",
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": {
+                "r": 0.078,
+                "g": 0.722,
+                "b": 0.651
+              }
+            }
+          ],
+          "lineHeight": {
+            "unit": "PERCENT",
+            "value": 120
+          }
+        },
+        {
+          "name": "Subheadline",
+          "type": "TEXT",
+          "x": 370,
+          "y": 450,
+          "characters": "Automated VAT filing, real-time validation, and comprehensive reporting",
+          "fontSize": 20,
+          "fontName": {
+            "family": "Manrope",
+            "style": "Regular"
+          },
+          "textAlignHorizontal": "CENTER",
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": {
+                "r": 0.804,
+                "g": 0.835,
+                "b": 0.875
+              }
+            }
+          ]
+        },
+        {
+          "name": "CTA Primary",
+          "type": "FRAME",
+          "width": 220,
+          "height": 52,
+          "x": 510,
+          "y": 550,
+          "cornerRadius": 12,
+          "backgroundColor": {
+            "r": 0.231,
+            "g": 0.510,
+            "b": 0.965,
+            "a": 1
+          },
+          "children": [
+            {
+              "name": "Button Text",
+              "type": "TEXT",
+              "x": 40,
+              "y": 14,
+              "characters": "Start Free Trial",
+              "fontSize": 18,
+              "fontName": {
+                "family": "Manrope",
+                "style": "Bold"
+              },
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "CTA Secondary",
+          "type": "FRAME",
+          "width": 180,
+          "height": 52,
+          "x": 750,
+          "y": 550,
+          "cornerRadius": 12,
+          "backgroundColor": {
+            "r": 0.125,
+            "g": 0.145,
+            "b": 0.224,
+            "a": 1
+          },
+          "strokeWeight": 1,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": {
+                "r": 0.078,
+                "g": 0.722,
+                "b": 0.651
+              }
+            }
+          ],
+          "children": [
+            {
+              "name": "Button Text",
+              "type": "TEXT",
+              "x": 40,
+              "y": 14,
+              "characters": "Watch Demo",
+              "fontSize": 18,
+              "fontName": {
+                "family": "Manrope",
+                "style": "Bold"
+              },
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": {
+                    "r": 0.078,
+                    "g": 0.722,
+                    "b": 0.651
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Social Proof",
+          "type": "TEXT",
+          "x": 520,
+          "y": 680,
+          "characters": "Trusted by 5,000+ businesses across Europe",
+          "fontSize": 14,
+          "fontName": {
+            "family": "Manrope",
+            "style": "Regular"
+          },
+          "textAlignHorizontal": "CENTER",
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": {
+                "r": 0.580,
+                "g": 0.639,
+                "b": 0.722
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Features Section",
+      "type": "FRAME",
+      "width": 1440,
+      "height": 600,
+      "x": 0,
+      "y": 880,
+      "backgroundColor": {
+        "r": 0.102,
+        "g": 0.122,
+        "b": 0.208,
+        "a": 1
+      },
+      "children": [
+        {
+          "name": "Section Title",
+          "type": "TEXT",
+          "x": 520,
+          "y": 80,
+          "characters": "Everything You Need for VAT Compliance",
+          "fontSize": 36,
+          "fontName": {
+            "family": "Manrope",
+            "style": "Bold"
+          },
+          "textAlignHorizontal": "CENTER",
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              }
+            }
+          ]
+        },
+        {
+          "name": "Feature Card 1",
+          "type": "FRAME",
+          "width": 380,
+          "height": 220,
+          "x": 120,
+          "y": 200,
+          "cornerRadius": 16,
+          "backgroundColor": {
+            "r": 0.125,
+            "g": 0.145,
+            "b": 0.224,
+            "a": 0.8
+          },
+          "strokeWeight": 1,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": {
+                "r": 0.078,
+                "g": 0.722,
+                "b": 0.651,
+                "a": 0.15
+              }
+            }
+          ],
+          "children": [
+            {
+              "name": "Icon",
+              "type": "TEXT",
+              "x": 30,
+              "y": 30,
+              "characters": "✨",
+              "fontSize": 40,
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular"
+              }
+            },
+            {
+              "name": "Title",
+              "type": "TEXT",
+              "x": 30,
+              "y": 100,
+              "characters": "AI-Powered Validation",
+              "fontSize": 20,
+              "fontName": {
+                "family": "Manrope",
+                "style": "Bold"
+              },
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Description",
+              "type": "TEXT",
+              "x": 30,
+              "y": 140,
+              "characters": "Intelligent VAT number validation with real-time verification",
+              "fontSize": 14,
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular"
+              },
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": {
+                    "r": 0.580,
+                    "g": 0.639,
+                    "b": 0.722
+                  }
+                }
+              ],
+              "lineHeight": {
+                "unit": "PERCENT",
+                "value": 150
+              }
+            }
+          ]
+        },
+        {
+          "name": "Feature Card 2",
+          "type": "FRAME",
+          "width": 380,
+          "height": 220,
+          "x": 530,
+          "y": 200,
+          "cornerRadius": 16,
+          "backgroundColor": {
+            "r": 0.125,
+            "g": 0.145,
+            "b": 0.224,
+            "a": 0.8
+          },
+          "strokeWeight": 1,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": {
+                "r": 0.078,
+                "g": 0.722,
+                "b": 0.651,
+                "a": 0.15
+              }
+            }
+          ],
+          "children": [
+            {
+              "name": "Icon",
+              "type": "TEXT",
+              "x": 30,
+              "y": 30,
+              "characters": "📊",
+              "fontSize": 40,
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular"
+              }
+            },
+            {
+              "name": "Title",
+              "type": "TEXT",
+              "x": 30,
+              "y": 100,
+              "characters": "Real-Time Reporting",
+              "fontSize": 20,
+              "fontName": {
+                "family": "Manrope",
+                "style": "Bold"
+              },
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Description",
+              "type": "TEXT",
+              "x": 30,
+              "y": 140,
+              "characters": "Live dashboards with comprehensive analytics and compliance tracking",
+              "fontSize": 14,
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular"
+              },
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": {
+                    "r": 0.580,
+                    "g": 0.639,
+                    "b": 0.722
+                  }
+                }
+              ],
+              "lineHeight": {
+                "unit": "PERCENT",
+                "value": 150
+              }
+            }
+          ]
+        },
+        {
+          "name": "Feature Card 3",
+          "type": "FRAME",
+          "width": 380,
+          "height": 220,
+          "x": 940,
+          "y": 200,
+          "cornerRadius": 16,
+          "backgroundColor": {
+            "r": 0.125,
+            "g": 0.145,
+            "b": 0.224,
+            "a": 0.8
+          },
+          "strokeWeight": 1,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": {
+                "r": 0.078,
+                "g": 0.722,
+                "b": 0.651,
+                "a": 0.15
+              }
+            }
+          ],
+          "children": [
+            {
+              "name": "Icon",
+              "type": "TEXT",
+              "x": 30,
+              "y": 30,
+              "characters": "🔒",
+              "fontSize": 40,
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular"
+              }
+            },
+            {
+              "name": "Title",
+              "type": "TEXT",
+              "x": 30,
+              "y": 100,
+              "characters": "Secure & Compliant",
+              "fontSize": 20,
+              "fontName": {
+                "family": "Manrope",
+                "style": "Bold"
+              },
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Description",
+              "type": "TEXT",
+              "x": 30,
+              "y": 140,
+              "characters": "Bank-level security with GDPR compliance and encrypted data storage",
+              "fontSize": 14,
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular"
+              },
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": {
+                    "r": 0.580,
+                    "g": 0.639,
+                    "b": 0.722
+                  }
+                }
+              ],
+              "lineHeight": {
+                "unit": "PERCENT",
+                "value": 150
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Stats Section",
+      "type": "FRAME",
+      "width": 1440,
+      "height": 300,
+      "x": 0,
+      "y": 1480,
+      "backgroundColor": {
+        "r": 0.039,
+        "g": 0.055,
+        "b": 0.102,
+        "a": 1
+      },
+      "children": [
+        {
+          "name": "Stat Card 1",
+          "type": "FRAME",
+          "width": 300,
+          "height": 150,
+          "x": 150,
+          "y": 75,
+          "cornerRadius": 12,
+          "backgroundColor": {
+            "r": 0.125,
+            "g": 0.145,
+            "b": 0.224,
+            "a": 0.8
+          },
+          "children": [
+            {
+              "name": "Value",
+              "type": "TEXT",
+              "x": 100,
+              "y": 40,
+              "characters": "5,000+",
+              "fontSize": 48,
+              "fontName": {
+                "family": "Manrope",
+                "style": "Bold"
+              },
+              "textAlignHorizontal": "CENTER",
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": {
+                    "r": 0.078,
+                    "g": 0.722,
+                    "b": 0.651
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Label",
+              "type": "TEXT",
+              "x": 80,
+              "y": 110,
+              "characters": "Active Users",
+              "fontSize": 14,
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular"
+              },
+              "textAlignHorizontal": "CENTER",
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": {
+                    "r": 0.580,
+                    "g": 0.639,
+                    "b": 0.722
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Stat Card 2",
+          "type": "FRAME",
+          "width": 300,
+          "height": 150,
+          "x": 570,
+          "y": 75,
+          "cornerRadius": 12,
+          "backgroundColor": {
+            "r": 0.125,
+            "g": 0.145,
+            "b": 0.224,
+            "a": 0.8
+          },
+          "children": [
+            {
+              "name": "Value",
+              "type": "TEXT",
+              "x": 90,
+              "y": 40,
+              "characters": "€2.5B+",
+              "fontSize": 48,
+              "fontName": {
+                "family": "Manrope",
+                "style": "Bold"
+              },
+              "textAlignHorizontal": "CENTER",
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": {
+                    "r": 0.078,
+                    "g": 0.722,
+                    "b": 0.651
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Label",
+              "type": "TEXT",
+              "x": 70,
+              "y": 110,
+              "characters": "VAT Processed",
+              "fontSize": 14,
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular"
+              },
+              "textAlignHorizontal": "CENTER",
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": {
+                    "r": 0.580,
+                    "g": 0.639,
+                    "b": 0.722
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Stat Card 3",
+          "type": "FRAME",
+          "width": 300,
+          "height": 150,
+          "x": 990,
+          "y": 75,
+          "cornerRadius": 12,
+          "backgroundColor": {
+            "r": 0.125,
+            "g": 0.145,
+            "b": 0.224,
+            "a": 0.8
+          },
+          "children": [
+            {
+              "name": "Value",
+              "type": "TEXT",
+              "x": 100,
+              "y": 40,
+              "characters": "99.9%",
+              "fontSize": 48,
+              "fontName": {
+                "family": "Manrope",
+                "style": "Bold"
+              },
+              "textAlignHorizontal": "CENTER",
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": {
+                    "r": 0.078,
+                    "g": 0.722,
+                    "b": 0.651
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Label",
+              "type": "TEXT",
+              "x": 80,
+              "y": 110,
+              "characters": "Accuracy Rate",
+              "fontSize": 14,
+              "fontName": {
+                "family": "Manrope",
+                "style": "Regular"
+              },
+              "textAlignHorizontal": "CENTER",
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": {
+                    "r": 0.580,
+                    "g": 0.639,
+                    "b": 0.722
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

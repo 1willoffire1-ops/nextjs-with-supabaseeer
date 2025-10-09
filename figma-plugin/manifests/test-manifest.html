@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Manifest Loading</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #0A0E1A;
+            color: #fff;
+        }
+        .container {
+            background: rgba(26, 31, 46, 0.8);
+            border: 1px solid rgba(0, 217, 180, 0.15);
+            border-radius: 12px;
+            padding: 30px;
+        }
+        h1 {
+            color: #00D9B4;
+            margin-top: 0;
+        }
+        .status {
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        .success {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            color: #10B981;
+        }
+        .error {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #EF4444;
+        }
+        .info {
+            background: rgba(0, 217, 180, 0.1);
+            border: 1px solid rgba(0, 217, 180, 0.3);
+            color: #00D9B4;
+        }
+        pre {
+            background: #0A0E1A;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            border: 1px solid rgba(0, 217, 180, 0.1);
+        }
+        button {
+            background: linear-gradient(135deg, #00D9B4 0%, #14F195 100%);
+            border: none;
+            color: #0A0E1A;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+        .section {
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(15, 20, 25, 0.5);
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Manifest JSON Validator</h1>
+        
+        <div class="section">
+            <h2>Test 1: Landing Page Manifest</h2>
+            <button onclick="testLandingManifest()">Load Landing Page Manifest</button>
+            <div id="landing-result"></div>
+        </div>
+
+        <div class="section">
+            <h2>Test 2: Dashboard Manifest</h2>
+            <button onclick="testDashboardManifest()">Load Dashboard Manifest</button>
+            <div id="dashboard-result"></div>
+        </div>
+
+        <div class="section">
+            <h2>Test 3: Direct File Input</h2>
+            <input type="file" id="fileInput" accept=".json" onchange="testFileInput(event)">
+            <div id="file-result"></div>
+        </div>
+    </div>
+
+    <script>
+        async function testLandingManifest() {
+            const resultDiv = document.getElementById('landing-result');
+            resultDiv.innerHTML = '<div class="status info">⏳ Loading...</div>';
+            
+            try {
+                const response = await fetch('./landing-page-manifest.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                
+                resultDiv.innerHTML = `
+                    <div class="status success">
+                        <strong>✅ Successfully Loaded!</strong><br>
+                        <br>
+                        <strong>Page Type:</strong> ${data.page_type}<br>
+                        <strong>Page Name:</strong> ${data.page_name}<br>
+                        <strong>Version:</strong> ${data.version}<br>
+                        <strong>Sections:</strong> ${data.sections.length}<br>
+                        <strong>Framework:</strong> ${data.framework}<br>
+                        <strong>File Size:</strong> ${JSON.stringify(data).length} bytes
+                    </div>
+                    <h3>Sections:</h3>
+                    <pre>${data.sections.map(s => `- ${s.name} (${s.type})`).join('\n')}</pre>
+                `;
+            } catch (error) {
+                resultDiv.innerHTML = `
+                    <div class="status error">
+                        <strong>❌ Error Loading Manifest</strong><br>
+                        <br>
+                        ${error.message}<br>
+                        <br>
+                        <em>Note: If you see a CORS error, you need to serve this page from a local server.</em>
+                    </div>
+                `;
+            }
+        }
+
+        async function testDashboardManifest() {
+            const resultDiv = document.getElementById('dashboard-result');
+            resultDiv.innerHTML = '<div class="status info">⏳ Loading...</div>';
+            
+            try {
+                const response = await fetch('./dashboard-manifest.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                
+                resultDiv.innerHTML = `
+                    <div class="status success">
+                        <strong>✅ Successfully Loaded!</strong><br>
+                        <br>
+                        <strong>Page Type:</strong> ${data.page_type}<br>
+                        <strong>Page Name:</strong> ${data.page_name}<br>
+                        <strong>Version:</strong> ${data.version}<br>
+                        <strong>Sections:</strong> ${data.sections.length}<br>
+                        <strong>Layout Type:</strong> ${data.layout.type}<br>
+                        <strong>File Size:</strong> ${JSON.stringify(data).length} bytes
+                    </div>
+                    <h3>Sections:</h3>
+                    <pre>${data.sections.map(s => `- ${s.name} (${s.type})`).join('\n')}</pre>
+                `;
+            } catch (error) {
+                resultDiv.innerHTML = `
+                    <div class="status error">
+                        <strong>❌ Error Loading Manifest</strong><br>
+                        <br>
+                        ${error.message}
+                    </div>
+                `;
+            }
+        }
+
+        function testFileInput(event) {
+            const resultDiv = document.getElementById('file-result');
+            const file = event.target.files[0];
+            
+            if (!file) return;
+            
+            resultDiv.innerHTML = '<div class="status info">⏳ Reading file...</div>';
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const data = JSON.parse(e.target.result);
+                    
+                    resultDiv.innerHTML = `
+                        <div class="status success">
+                            <strong>✅ Valid JSON!</strong><br>
+                            <br>
+                            <strong>File:</strong> ${file.name}<br>
+                            <strong>Size:</strong> ${file.size} bytes<br>
+                            <strong>Page Type:</strong> ${data.page_type || 'N/A'}<br>
+                            <strong>Page Name:</strong> ${data.page_name || 'N/A'}<br>
+                            ${data.sections ? `<strong>Sections:</strong> ${data.sections.length}` : ''}
+                        </div>
+                        <h3>JSON Structure:</h3>
+                        <pre>${JSON.stringify(data, null, 2).substring(0, 500)}...</pre>
+                    `;
+                } catch (error) {
+                    resultDiv.innerHTML = `
+                        <div class="status error">
+                            <strong>❌ Invalid JSON</strong><br>
+                            <br>
+                            ${error.message}
+                        </div>
+                    `;
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        // Show instructions on load
+        window.addEventListener('load', () => {
+            console.log('✅ Test page loaded successfully');
+            console.log('📝 Instructions:');
+            console.log('1. Click buttons to test fetching manifests');
+            console.log('2. Or use file input to test any JSON file');
+            console.log('3. If CORS errors appear, run: npx serve .');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,655 @@
+{
+  "page_type": "landing",
+  "page_name": "VATANA Landing Page",
+  "version": "1.0.0",
+  "framework": "react",
+  "styling": "tailwind",
+  "description": "Modern, high-converting landing page for VATANA - AI-powered VAT compliance platform",
+  
+  "design_system": {
+    "theme": "dark",
+    "effects": ["glassmorphism", "gradients", "blur"],
+    "typography": {
+      "primary": "Manrope",
+      "fallback": ["Inter", "Roboto", "system-ui"]
+    },
+    "colors": {
+      "primary": "#00D9B4",
+      "secondary": "#14F195",
+      "background": {
+        "primary": "#0A0E1A",
+        "secondary": "#0F1419",
+        "card": "#1A1F2E"
+      },
+      "text": {
+        "primary": "#FFFFFF",
+        "secondary": "#D1D5DB",
+        "muted": "#9CA3AF"
+      },
+      "accent": {
+        "turquoise": "#00D9B4",
+        "mint": "#14F195",
+        "error": "#EF4444",
+        "warning": "#F59E0B",
+        "success": "#10B981"
+      }
+    },
+    "spacing": {
+      "section": "96px",
+      "container": "80px",
+      "card": "32px",
+      "element": "16px"
+    },
+    "effects": {
+      "glass": {
+        "background": "rgba(26, 31, 46, 0.8)",
+        "backdrop_filter": "blur(20px)",
+        "border": "1px solid rgba(0, 217, 180, 0.15)"
+      },
+      "glow": {
+        "color": "rgba(0, 217, 180, 0.3)",
+        "blur": "20px"
+      }
+    }
+  },
+  
+  "sections": [
+    {
+      "id": "navbar",
+      "name": "Navigation Bar",
+      "type": "fixed_header",
+      "position": "fixed",
+      "z_index": 50,
+      "dimensions": {
+        "height": "80px",
+        "width": "100%"
+      },
+      "background": {
+        "color": "rgba(10, 14, 26, 0.8)",
+        "blur": "20px",
+        "border_bottom": "1px solid rgba(0, 217, 180, 0.1)"
+      },
+      "states": {
+        "default": {
+          "opacity": 0.8
+        },
+        "scrolled": {
+          "opacity": 1,
+          "shadow": "0 4px 20px rgba(0, 0, 0, 0.3)"
+        }
+      },
+      "content": {
+        "logo": {
+          "text": "VATANA",
+          "style": "text-2xl font-bold",
+          "gradient": ["#00D9B4", "#14F195"]
+        },
+        "nav_links": [
+          { "text": "Features", "href": "#features" },
+          { "text": "Pricing", "href": "#pricing" },
+          { "text": "About", "href": "#about" },
+          { "text": "Contact", "href": "#contact" }
+        ],
+        "buttons": [
+          {
+            "text": "Log In",
+            "variant": "glass",
+            "style": "outline"
+          },
+          {
+            "text": "Get Started",
+            "variant": "primary",
+            "style": "gradient"
+          }
+        ]
+      },
+      "responsive": {
+        "mobile": {
+          "layout": "hamburger_menu",
+          "menu_type": "slide_in_right"
+        },
+        "desktop": {
+          "layout": "horizontal",
+          "justify": "space-between"
+        }
+      }
+    },
+    
+    {
+      "id": "hero",
+      "name": "Hero Section",
+      "type": "hero",
+      "dimensions": {
+        "min_height": "100vh"
+      },
+      "background": {
+        "type": "gradient_mesh",
+        "gradients": [
+          {
+            "type": "radial",
+            "position": "20% 50%",
+            "color": "rgba(0, 217, 180, 0.15)",
+            "spread": "50%"
+          },
+          {
+            "type": "radial",
+            "position": "80% 80%",
+            "color": "rgba(20, 241, 149, 0.15)",
+            "spread": "50%"
+          },
+          {
+            "type": "radial",
+            "position": "40% 20%",
+            "color": "rgba(0, 217, 180, 0.1)",
+            "spread": "50%"
+          }
+        ],
+        "base_color": "#0A0E1A",
+        "animation": {
+          "type": "gradient_shift",
+          "duration": "15s",
+          "easing": "ease",
+          "infinite": true
+        }
+      },
+      "content": {
+        "headline": {
+          "text": "Simplify VAT Compliance with AI",
+          "style": {
+            "font_size": "text-6xl",
+            "font_weight": "font-extrabold",
+            "gradient": ["#00D9B4", "#14F195"],
+            "align": "center"
+          },
+          "animation": {
+            "type": "fade-in-up",
+            "delay": "0ms"
+          }
+        },
+        "subheadline": {
+          "text": "Automated VAT filing, real-time validation, and comprehensive reporting for modern businesses",
+          "style": {
+            "font_size": "text-xl",
+            "color": "text-gray-300",
+            "max_width": "max-w-2xl",
+            "align": "center"
+          },
+          "animation": {
+            "type": "fade-in-up",
+            "delay": "200ms"
+          }
+        },
+        "cta_buttons": [
+          {
+            "text": "Start Free Trial",
+            "variant": "primary",
+            "style": {
+              "background": "gradient",
+              "gradient": ["#00D9B4", "#14F195"],
+              "text_color": "#0A0E1A",
+              "padding": "px-8 py-4",
+              "font_size": "text-lg",
+              "font_weight": "font-semibold",
+              "border_radius": "rounded-xl"
+            },
+            "effects": ["glow_pulse", "shimmer_hover"]
+          },
+          {
+            "text": "Watch Demo",
+            "variant": "secondary",
+            "style": {
+              "background": "rgba(0, 217, 180, 0.1)",
+              "border": "1px solid rgba(0, 217, 180, 0.3)",
+              "text_color": "#00D9B4",
+              "padding": "px-8 py-4",
+              "font_size": "text-lg",
+              "border_radius": "rounded-xl"
+            }
+          }
+        ],
+        "social_proof": {
+          "text": "Trusted by 5,000+ businesses across Europe",
+          "style": "text-sm text-gray-400",
+          "margin_top": "mt-12"
+        }
+      },
+      "responsive": {
+        "mobile": {
+          "headline_size": "text-4xl",
+          "subheadline_size": "text-lg",
+          "button_layout": "stacked"
+        },
+        "desktop": {
+          "headline_size": "text-6xl",
+          "button_layout": "horizontal",
+          "button_gap": "gap-4"
+        }
+      }
+    },
+    
+    {
+      "id": "features",
+      "name": "Features Section",
+      "type": "grid",
+      "padding": "py-24",
+      "background": "#0F1419",
+      "header": {
+        "badge": {
+          "text": "FEATURES",
+          "style": "glass_badge",
+          "indicator": "pulsing_dot"
+        },
+        "title": {
+          "text": "Everything You Need for VAT Compliance",
+          "style": "gradient_text",
+          "gradient": ["#00D9B4", "#14F195"]
+        },
+        "subtitle": {
+          "text": "Powered by AI, designed for simplicity",
+          "style": "text-gray-400"
+        },
+        "align": "center"
+      },
+      "grid": {
+        "columns": {
+          "mobile": 1,
+          "tablet": 2,
+          "desktop": 3
+        },
+        "gap": "gap-8"
+      },
+      "features": [
+        {
+          "icon": "Sparkles",
+          "icon_color": "gradient",
+          "title": "AI-Powered Validation",
+          "description": "Intelligent VAT number validation with real-time verification across all EU countries"
+        },
+        {
+          "icon": "FileCheck",
+          "icon_color": "gradient",
+          "title": "Automated Filing",
+          "description": "Automatic VAT return generation and submission to tax authorities"
+        },
+        {
+          "icon": "BarChart3",
+          "icon_color": "gradient",
+          "title": "Real-Time Reporting",
+          "description": "Live dashboards with comprehensive analytics and compliance tracking"
+        },
+        {
+          "icon": "Globe",
+          "icon_color": "gradient",
+          "title": "Multi-Country Support",
+          "description": "Support for all EU member states with localized compliance rules"
+        },
+        {
+          "icon": "Shield",
+          "icon_color": "gradient",
+          "title": "Secure & Compliant",
+          "description": "Bank-level security with GDPR compliance and encrypted data storage"
+        },
+        {
+          "icon": "Zap",
+          "icon_color": "gradient",
+          "title": "Easy Integration",
+          "description": "Seamless integration with popular accounting software and ERPs"
+        }
+      ],
+      "card_style": {
+        "background": "rgba(26, 31, 46, 0.8)",
+        "backdrop_filter": "blur(20px)",
+        "border": "1px solid rgba(0, 217, 180, 0.15)",
+        "border_radius": "16px",
+        "padding": "32px",
+        "hover": {
+          "transform": "translateY(-4px)",
+          "border_color": "rgba(0, 217, 180, 0.3)",
+          "shadow": "0 12px 40px rgba(0, 217, 180, 0.2)"
+        }
+      },
+      "card_structure": {
+        "icon": {
+          "size": "56x56px",
+          "background": "gradient",
+          "border_radius": "rounded-xl"
+        },
+        "title": {
+          "style": "text-xl font-semibold text-white",
+          "margin_top": "mt-6"
+        },
+        "description": {
+          "style": "text-gray-400 leading-relaxed",
+          "margin_top": "mt-2"
+        }
+      }
+    },
+    
+    {
+      "id": "how_it_works",
+      "name": "How It Works Section",
+      "type": "timeline",
+      "padding": "py-24",
+      "background": "gradient_mesh",
+      "header": {
+        "title": "Get Started in 3 Simple Steps",
+        "align": "center"
+      },
+      "layout": {
+        "mobile": "vertical",
+        "desktop": "horizontal_with_connectors"
+      },
+      "steps": [
+        {
+          "number": "01",
+          "icon": "Upload",
+          "title": "Upload Your Data",
+          "description": "Import invoices and transactions from your accounting system"
+        },
+        {
+          "number": "02",
+          "icon": "CheckCircle",
+          "title": "AI Validation",
+          "description": "Our AI automatically validates VAT numbers and categorizes transactions"
+        },
+        {
+          "number": "03",
+          "icon": "Send",
+          "title": "File & Comply",
+          "description": "Generate reports and file directly to tax authorities"
+        }
+      ],
+      "step_style": {
+        "card": "glass",
+        "connector": {
+          "type": "gradient_line",
+          "gradient": ["#00D9B4", "#14F195"]
+        },
+        "number": {
+          "style": "gradient_text",
+          "size": "text-5xl"
+        },
+        "hover": {
+          "scale": 1.02,
+          "glow": true
+        }
+      }
+    },
+    
+    {
+      "id": "stats",
+      "name": "Stats/Social Proof Section",
+      "type": "stats_grid",
+      "padding": "py-20",
+      "background": "#0A0E1A",
+      "grid": {
+        "columns": {
+          "mobile": 2,
+          "desktop": 4
+        },
+        "gap": "gap-8"
+      },
+      "stats": [
+        {
+          "value": "5,000+",
+          "label": "Active Users"
+        },
+        {
+          "value": "€2.5B+",
+          "label": "VAT Processed"
+        },
+        {
+          "value": "99.9%",
+          "label": "Accuracy Rate"
+        },
+        {
+          "value": "24/7",
+          "label": "Support"
+        }
+      ],
+      "card_style": {
+        "background": "glass",
+        "value": {
+          "style": "text-5xl font-bold gradient_text"
+        },
+        "label": {
+          "style": "text-gray-400"
+        },
+        "hover": {
+          "animation": "pulsing_glow"
+        }
+      }
+    },
+    
+    {
+      "id": "pricing",
+      "name": "Pricing Section",
+      "type": "pricing_cards",
+      "padding": "py-24",
+      "background": "#0F1419",
+      "header": {
+        "title": "Simple, Transparent Pricing",
+        "align": "center"
+      },
+      "plans": [
+        {
+          "name": "Starter",
+          "price": "€49",
+          "period": "month",
+          "features": [
+            "Up to 100 transactions/month",
+            "1 EU country",
+            "Basic reporting",
+            "Email support"
+          ],
+          "cta": {
+            "text": "Get Started",
+            "variant": "glass"
+          }
+        },
+        {
+          "name": "Professional",
+          "price": "€149",
+          "period": "month",
+          "badge": "Popular",
+          "features": [
+            "Up to 1,000 transactions/month",
+            "All EU countries",
+            "Advanced analytics",
+            "Priority support",
+            "API access"
+          ],
+          "cta": {
+            "text": "Start Free Trial",
+            "variant": "gradient"
+          },
+          "highlight": true
+        },
+        {
+          "name": "Enterprise",
+          "price": "Custom",
+          "features": [
+            "Unlimited transactions",
+            "Global coverage",
+            "Custom integrations",
+            "Dedicated account manager",
+            "SLA guarantee"
+          ],
+          "cta": {
+            "text": "Contact Sales",
+            "variant": "glass"
+          }
+        }
+      ],
+      "card_style": {
+        "default": {
+          "background": "glass",
+          "border": "rgba(0, 217, 180, 0.15)"
+        },
+        "highlighted": {
+          "border": "gradient",
+          "elevation": "elevated",
+          "glow": true
+        }
+      }
+    },
+    
+    {
+      "id": "cta",
+      "name": "Final CTA Section",
+      "type": "cta",
+      "padding": "py-24",
+      "background": "gradient_mesh",
+      "container": {
+        "max_width": "max-w-4xl",
+        "style": "glass_extra_blur",
+        "border": "gradient",
+        "glow": true
+      },
+      "content": {
+        "headline": "Ready to Simplify Your VAT Compliance?",
+        "subtext": "Join thousands of businesses automating their VAT processes",
+        "cta": {
+          "type": "email_form",
+          "button_text": "Start Free Trial",
+          "disclaimer": "No credit card required • 14-day free trial"
+        }
+      }
+    },
+    
+    {
+      "id": "footer",
+      "name": "Footer",
+      "type": "footer",
+      "padding": "py-16",
+      "background": "#0A0E1A",
+      "border_top": "1px solid rgba(0, 217, 180, 0.1)",
+      "layout": {
+        "mobile": "stacked",
+        "desktop": "4_columns"
+      },
+      "columns": [
+        {
+          "title": "Product",
+          "links": ["Features", "Pricing", "Integrations", "API"]
+        },
+        {
+          "title": "Company",
+          "links": ["About", "Blog", "Careers", "Contact"]
+        },
+        {
+          "title": "Resources",
+          "links": ["Documentation", "Help Center", "Community", "Status"]
+        },
+        {
+          "title": "Legal",
+          "links": ["Privacy Policy", "Terms of Service", "Cookie Policy"]
+        }
+      ],
+      "bottom_row": {
+        "left": "© 2025 VATANA. All rights reserved.",
+        "right": {
+          "type": "social_icons",
+          "platforms": ["LinkedIn", "Twitter", "GitHub"],
+          "color": "#00D9B4"
+        }
+      },
+      "link_style": {
+        "default": "text-gray-400",
+        "hover": "text-turquoise",
+        "transition": "smooth"
+      }
+    }
+  ],
+  
+  "animations": {
+    "on_load": {
+      "hero_content": {
+        "type": "fade-in-up",
+        "sequential": true,
+        "stagger": "100ms"
+      },
+      "features": {
+        "type": "stagger_fade_in",
+        "trigger": "scroll"
+      }
+    },
+    "on_scroll": {
+      "navbar": {
+        "add_shadow": true,
+        "increase_opacity": true
+      },
+      "elements": {
+        "type": "fade-in-up",
+        "trigger": "viewport_enter"
+      }
+    },
+    "on_hover": {
+      "cards": ["lift", "glow"],
+      "buttons": ["shimmer"],
+      "links": ["color_transition"]
+    },
+    "micro_interactions": {
+      "button_press": {
+        "scale": 0.98
+      },
+      "card_hover": {
+        "border": "glow_pulse"
+      },
+      "icon_hover": {
+        "transform": "gentle_rotate_or_scale"
+      }
+    }
+  },
+  
+  "responsive": {
+    "breakpoints": {
+      "mobile": "< 768px",
+      "tablet": "768px - 1024px",
+      "desktop": "> 1024px"
+    },
+    "mobile": {
+      "layout": "single_column",
+      "buttons": "stacked",
+      "menu": "hamburger"
+    },
+    "tablet": {
+      "grids": "2_columns"
+    },
+    "desktop": {
+      "grids": "multi_column"
+    }
+  },
+  
+  "copy_tone": {
+    "style": "professional_yet_approachable",
+    "focus": "benefit_focused_not_feature_focused",
+    "value_proposition": "clear",
+    "ctas": "action_oriented"
+  },
+  
+  "final_touches": {
+    "smooth_scroll": true,
+    "loading_states": true,
+    "focus_states": true,
+    "parallax_effect": "subtle",
+    "scroll_to_top_button": true
+  },
+  
+  "figma_generation": {
+    "canvas_size": {
+      "width": 1440,
+      "height": "auto"
+    },
+    "components_needed": [
+      "navbar_fixed",
+      "hero_full_screen",
+      "feature_cards_grid",
+      "timeline_steps",
+      "stat_cards",
+      "pricing_cards",
+      "cta_container",
+      "footer_multi_column"
+    ]
+  }
+}

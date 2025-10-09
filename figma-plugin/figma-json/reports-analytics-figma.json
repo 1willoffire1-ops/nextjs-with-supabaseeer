@@ -1,0 +1,3724 @@
+{
+  "name": "VATANA Reports & Analytics",
+  "type": "FRAME",
+  "width": 1440,
+  "height": 3800,
+  "x": 0,
+  "y": 0,
+  "backgroundColor": {
+    "r": 0.039,
+    "g": 0.055,
+    "b": 0.102,
+    "a": 1
+  },
+  "children": [
+    {
+      "name": "Top Bar",
+      "type": "FRAME",
+      "width": 1200,
+      "height": 72,
+      "x": 240,
+      "y": 0,
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": {
+            "r": 0.102,
+            "g": 0.122,
+            "b": 0.180,
+            "a": 0.8
+          }
+        }
+      ],
+      "effects": [
+        {
+          "type": "BACKGROUND_BLUR",
+          "radius": 20,
+          "visible": true
+        }
+      ],
+      "children": [
+        {
+          "name": "Left Section",
+          "type": "FRAME",
+          "width": 400,
+          "height": 72,
+          "x": 32,
+          "y": 0,
+          "layoutMode": "HORIZONTAL",
+          "children": [
+            {
+              "name": "Back Icon",
+              "type": "FRAME",
+              "width": 24,
+              "height": 24,
+              "x": 0,
+              "y": 24,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": {
+                    "r": 0.078,
+                    "g": 0.722,
+                    "b": 0.651,
+                    "a": 1
+                  }
+                }
+              ],
+              "cornerRadius": 4
+            },
+            {
+              "name": "Title Group",
+              "type": "FRAME",
+              "width": 360,
+              "height": 56,
+              "x": 40,
+              "y": 8,
+              "layoutMode": "VERTICAL",
+              "children": [
+                {
+                  "name": "Breadcrumb",
+                  "type": "TEXT",
+                  "characters": "Home / Reports",
+                  "fontSize": 12,
+                  "fontName": {
+                    "family": "Manrope",
+                    "style": "Regular"
+                  },
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": {
+                        "r": 0.580,
+                        "g": 0.639,
+                        "b": 0.722,
+                        "a": 1
+                      }
+                    }
+                  ],
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "name": "Page Title",
+                  "type": "TEXT",
+                  "characters": "Reports & Analytics",
+                  "fontSize": 28,
+                  "fontName": {
+                    "family": "Manrope",
+                    "style": "Bold"
+                  },
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": {
+                        "r": 1,
+                        "g": 1,
+                        "b": 1,
+                        "a": 1
+                      }
+                    }
+                  ],
+                  "x": 0,
+                  "y": 24
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Right Actions",
+          "type": "FRAME",
+          "width": 540,
+          "height": 48,
+          "x": 628,
+          "y": 12,
+          "layoutMode": "HORIZONTAL",
+          "itemSpacing": 12,
+          "children": [
+            {
+              "name": "Date Range Button",
+              "type": "FRAME",
+              "width": 160,
+              "height": 48,
+              "backgroundColor": {
+                "r": 0.125,
+                "g": 0.145,
+                "b": 0.224,
+                "a": 0.6
+              },
+              "cornerRadius": 12,
+              "strokeWeight": 1,
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": {
+                    "r": 0.078,
+                    "g": 0.722,
+                    "b": 0.651,
+                    "a": 0.15
+                  }
+                }
+              ],
+              "children": [
+                {
+                  "name": "Date Text",
+                  "type": "TEXT",
+                  "characters": "Last 6 months",
+                  "fontSize": 13,
+                  "fontName": {
+                    "family": "Manrope",
+                    "style": "Medium"
+                  },
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": {
+                        "r": 1,
+                        "g": 1,
+                        "b": 1,
+                        "a": 1
+                      }
+                    }
+                  ],
+                  "x": 16,
+                  "y": 14
+                }
+              ]
+            },
+            {
+              "name": "Export Button",
+              "type": "FRAME",
+              "width": 120,
+              "height": 48,
+              "backgroundColor": {
+                "r": 0.125,
+                "g": 0.145,
+                "b": 0.224,
+                "a": 0.6
+              },
+              "cornerRadius": 12,
+              "strokeWeight": 1,
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": {
+                    "r": 0.078,
+                    "g": 0.722,
+                    "b": 0.651,
+                    "a": 0.15
+                  }
+                }
+              ],
+              "children": [
+                {
+                  "name": "Export Text",
+                  "type": "TEXT",
+                  "characters": "Export",
+                  "fontSize": 14,
+                  "fontName": {
+                    "family": "Manrope",
+                    "style": "Medium"
+                  },
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": {
+                        "r": 1,
+                        "g": 1,
+                        "b": 1,
+                        "a": 1
+                      }
+                    }
+                  ],
+                  "x": 35,
+                  "y": 14
+                }
+              ]
+            },
+            {
+              "name": "Create Report Button",
+              "type": "FRAME",
+              "width": 160,
+              "height": 48,
+              "backgroundColor": {
+                "r": 0.078,
+                "g": 0.722,
+                "b": 0.651,
+                "a": 1
+              },
+              "cornerRadius": 12,
+              "effects": [
+                {
+                  "type": "DROP_SHADOW",
+                  "color": {
+                    "r": 0.078,
+                    "g": 0.722,
+                    "b": 0.651,
+                    "a": 0.4
+                  },
+                  "offset": {
+                    "x": 0,
+                    "y": 4
+                  },
+                  "radius": 20,
+                  "spread": 0,
+                  "visible": true
+                }
+              ],
+              "children": [
+                {
+                  "name": "Button Text",
+                  "type": "TEXT",
+                  "characters": "Create Report",
+                  "fontSize": 14,
+                  "fontName": {
+                    "family": "Manrope",
+                    "style": "Bold"
+                  },
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": {
+                        "r": 1,
+                        "g": 1,
+                        "b": 1,
+                        "a": 1
+                      }
+                    }
+                  ],
+                  "textAlignHorizontal": "CENTER",
+                  "x": 35,
+                  "y": 14
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Main Content Area",
+      "type": "FRAME",
+      "width": 1136,
+      "height": 3680,
+      "x": 272,
+      "y": 96,
+      "layoutMode": "HORIZONTAL",
+      "itemSpacing": 24,
+      "children": [
+        {
+          "name": "Left Panel - Filters",
+          "type": "FRAME",
+          "width": 280,
+          "height": 1200,
+          "backgroundColor": {
+            "r": 0.102,
+            "g": 0.122,
+            "b": 0.180,
+            "a": 0.6
+          },
+          "cornerRadius": 16,
+          "strokeWeight": 1,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": {
+                "r": 0.078,
+                "g": 0.722,
+                "b": 0.651,
+                "a": 0.15
+              }
+            }
+          ],
+          "effects": [
+            {
+              "type": "BACKGROUND_BLUR",
+              "radius": 20,
+              "visible": true
+            }
+          ],
+          "children": [
+            {
+              "name": "Report Templates Section",
+              "type": "FRAME",
+              "width": 232,
+              "height": 480,
+              "x": 24,
+              "y": 24,
+              "layoutMode": "VERTICAL",
+              "itemSpacing": 8,
+              "children": [
+                {
+                  "name": "Section Header",
+                  "type": "TEXT",
+                  "characters": "REPORT TEMPLATES",
+                  "fontSize": 11,
+                  "fontName": {
+                    "family": "Manrope",
+                    "style": "SemiBold"
+                  },
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": {
+                        "r": 0.580,
+                        "g": 0.639,
+                        "b": 0.722,
+                        "a": 1
+                      }
+                    }
+                  ],
+                  "textCase": "UPPER",
+                  "letterSpacing": 0.5
+                },
+                {
+                  "name": "Template - VAT Summary",
+                  "type": "FRAME",
+                  "width": 232,
+                  "height": 56,
+                  "backgroundColor": {
+                    "r": 0.078,
+                    "g": 0.722,
+                    "b": 0.651,
+                    "a": 0.1
+                  },
+                  "cornerRadius": 8,
+                  "strokeWeight": 3,
+                  "strokes": [
+                    {
+                      "type": "SOLID",
+                      "color": {
+                        "r": 0.078,
+                        "g": 0.722,
+                        "b": 0.651,
+                        "a": 1
+                      }
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "Icon",
+                      "type": "RECTANGLE",
+                      "width": 20,
+                      "height": 20,
+                      "x": 12,
+                      "y": 18,
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": {
+                            "r": 0.078,
+                            "g": 0.722,
+                            "b": 0.651,
+                            "a": 1
+                          }
+                        }
+                      ],
+                      "cornerRadius": 4
+                    },
+                    {
+                      "name": "Template Name",
+                      "type": "TEXT",
+                      "characters": "VAT Summary Report",
+                      "fontSize": 13,
+                      "fontName": {
+                        "family": "Manrope",
+                        "style": "SemiBold"
+                      },
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": {
+                            "r": 0.078,
+                            "g": 0.722,
+                            "b": 0.651,
+                            "a": 1
+                          }
+                        }
+                      ],
+                      "x": 40,
+                      "y": 10
+                    },
+                    {
+                      "name": "Description",
+                      "type": "TEXT",
+                      "characters": "Overview of VAT collected",
+                      "fontSize": 10,
+                      "fontName": {
+                        "family": "Manrope",
+                        "style": "Regular"
+                      },
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": {
+                            "r": 0.580,
+                            "g": 0.639,
+                            "b": 0.722,
+                            "a": 1
+                          }
+                        }
+                      ],
+                      "x": 40,
+                      "y": 30
+                    }
+                  ]
+                },
+                {
+                  "name": "Template - Transaction Report",
+                  "type": "FRAME",
+                  "width": 232,
+                  "height": 56,
+                  "cornerRadius": 8,
+                  "children": [
+                    {
+                      "name": "Icon",
+                      "type": "RECTANGLE",
+                      "width": 20,
+                      "height": 20,
+                      "x": 12,
+                      "y": 18,
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": {
+                            "r": 0.580,
+                            "g": 0.639,
+                            "b": 0.722,
+                            "a": 1
+                          }
+                        }
+                      ],
+                      "cornerRadius": 4
+                    },
+                    {
+                      "name": "Template Name",
+                      "type": "TEXT",
+                      "characters": "Transaction Report",
+                      "fontSize": 13,
+                      "fontName": {
+                        "family": "Manrope",
+                        "style": "Medium"
+                      },
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": {
+                            "r": 0.580,
+                            "g": 0.639,
+                            "b": 0.722,
+                            "a": 1
+                          }
+                        }
+                      ],
+                      "x": 40,
+                      "y": 10
+                    },
+                    {
+                      "name": "Description",
+                      "type": "TEXT",
+                      "characters": "Detailed transaction breakdown",
+                      "fontSize": 10,
+                      "fontName": {
+                        "family": "Manrope",
+                        "style": "Regular"
+                      },
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": {
+                            "r": 0.580,
+                            "g": 0.639,
+                            "b": 0.722,
+                            "a": 0.7
+                          }
+                        }
+                      ],
+                      "x": 40,
+                      "y": 30
+                    }
+                  ]
+                },
+                {
+                  "name": "Template - Compliance Report",
+                  "type": "FRAME",
+                  "width": 232,
+                  "height": 56,
+                  "cornerRadius": 8,
+                  "children": [
+                    {
+                      "name": "Icon",
+                      "type": "RECTANGLE",
+                      "width": 20,
+                      "height": 20,
+                      "x": 12,
+                      "y": 18,
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": {
+                            "r": 0.580,
+                            "g": 0.639,
+                            "b": 0.722,
+                            "a": 1
+                          }
+                        }
+                      ],
+                      "cornerRadius": 4
+                    },
+                    {
+                      "name": "Template Name",
+                      "type": "TEXT",
+                      "characters": "Compliance Report",
+                      "fontSize": 13,
+                      "fontName": {
+                        "family": "Manrope",
+                        "style": "Medium"
+                      },
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": {
+                            "r": 0.580,
+                            "g": 0.639,
+                            "b": 0.722,
+                            "a": 1
+                          }
+                        }
+                      ],
+                      "x": 40,
+                      "y": 10
+                    },
+                    {
+                      "name": "Description",
+                      "type": "TEXT",
+                      "characters": "Compliance status & deadlines",
+                      "fontSize": 10,
+                      "fontName": {
+                        "family": "Manrope",
+                        "style": "Regular"
+                      },
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": {
+                            "r": 0.580,
+                            "g": 0.639,
+                            "b": 0.722,
+                            "a": 0.7
+                          }
+                        }
+                      ],
+                      "x": 40,
+                      "y": 30
+                    }
+                  ]
+                },
+                {
+                  "name": "Template - Country Analysis",
+                  "type": "FRAME",
+                  "width": 232,
+                  "height": 56,
+                  "cornerRadius": 8,
+                  "children": [
+                    {
+                      "name": "Icon",
+                      "type": "ELLIPSE",
+                      "width": 20,
+                      "height": 20,
+                      "x": 12,
+                      "y": 18,
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": {
+                            "r": 0.580,
+                            "g": 0.639,
+                            "b": 0.722,
+                            "a": 1
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Template Name",
+                      "type": "TEXT",
+                      "characters": "Country Analysis",
+                      "fontSize": 13,
+                      "fontName": {
+                        "family": "Manrope",
+                        "style": "Medium"
+                      },
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": {
+                            "r": 0.580,
+                            "g": 0.639,
+                            "b": 0.722,
+                            "a": 1
+                          }
+                        }
+                      ],
+                      "x": 40,
+                      "y": 10
+                    },
+                    {
+                      "name": "Description",
+                      "type": "TEXT",
+                      "characters": "VAT breakdown by country",
+                      "fontSize": 10,
+                      "fontName": {
+                        "family": "Manrope",
+                        "style": "Regular"
+                      },
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": {
+                            "r": 0.580,
+                            "g": 0.639,
+                            "b": 0.722,
+                            "a": 0.7
+                          }
+                        }
+                      ],
+                      "x": 40,
+                      "y": 30
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Date Range Filter",
+              "type": "FRAME",
+              "width": 232,
+              "height": 180,
+              "x": 24,
+              "y": 528,
+              "layoutMode": "VERTICAL",
+              "itemSpacing": 12,
+              "children": [
+                {
+                  "name": "Section Header",
+                  "type": "TEXT",
+                  "characters": "DATE RANGE",
+                  "fontSize": 11,
+                  "fontName": {
+                    "family": "Manrope",
+                    "style": "SemiBold"
+                  },
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": {
+                        "r": 0.580,
+                        "g": 0.639,
+                        "b": 0.722,
+                        "a": 1
+                      }
+                    }
+                  ],
+                  "textCase": "UPPER",
+                  "letterSpacing": 0.5
+                },
+                {
+                  "name": "Quick Options",
+                  "type": "FRAME",
+                  "width": 232,
+                  "height": 64,
+                  "layoutMode": "HORIZONTAL",
+                  "itemSpacing": 8,
+                  "children": [
+                    {
+                      "name": "Chip - 7D",
+                      "type": "FRAME",
+                      "width": 48,
+                      "height": 28,
+                      "backgroundColor": {
+                        "r": 0.125,
+                        "g": 0.145,
+                        "b": 0.224,
+                        "a": 0.6
+                      },
+                      "cornerRadius": 14,
+                      "children": [
+                        {
+                          "name": "Label",
+                          "type": "TEXT",
+                          "characters": "7D",
+                          "fontSize": 11,
+                          "fontName": {
+                            "family": "Manrope",
+                            "style": "Medium"
+                          },
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 0.580,
+                                "g": 0.639,
+                                "b": 0.722,
+                                "a": 1
+                              }
+                            }
+                          ],
+                          "textAlignHorizontal": "CENTER",
+                          "x": 14,
+                          "y": 7
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Chip - 30D",
+                      "type": "FRAME",
+                      "width": 52,
+                      "height": 28,
+                      "backgroundColor": {
+                        "r": 0.125,
+                        "g": 0.145,
+                        "b": 0.224,
+                        "a": 0.6
+                      },
+                      "cornerRadius": 14,
+                      "children": [
+                        {
+                          "name": "Label",
+                          "type": "TEXT",
+                          "characters": "30D",
+                          "fontSize": 11,
+                          "fontName": {
+                            "family": "Manrope",
+                            "style": "Medium"
+                          },
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 0.580,
+                                "g": 0.639,
+                                "b": 0.722,
+                                "a": 1
+                              }
+                            }
+                          ],
+                          "textAlignHorizontal": "CENTER",
+                          "x": 14,
+                          "y": 7
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Chip - 6M Active",
+                      "type": "FRAME",
+                      "width": 48,
+                      "height": 28,
+                      "fills": [
+                        {
+                          "type": "GRADIENT_LINEAR",
+                          "gradientStops": [
+                            {
+                              "position": 0,
+                              "color": {
+                                "r": 0.078,
+                                "g": 0.722,
+                                "b": 0.651,
+                                "a": 1
+                              }
+                            },
+                            {
+                              "position": 1,
+                              "color": {
+                                "r": 0.078,
+                                "g": 0.882,
+                                "b": 0.588,
+                                "a": 1
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "cornerRadius": 14,
+                      "children": [
+                        {
+                          "name": "Label",
+                          "type": "TEXT",
+                          "characters": "6M",
+                          "fontSize": 11,
+                          "fontName": {
+                            "family": "Manrope",
+                            "style": "Bold"
+                          },
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 1,
+                                "g": 1,
+                                "b": 1,
+                                "a": 1
+                              }
+                            }
+                          ],
+                          "textAlignHorizontal": "CENTER",
+                          "x": 14,
+                          "y": 7
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Chip - YTD",
+                      "type": "FRAME",
+                      "width": 52,
+                      "height": 28,
+                      "backgroundColor": {
+                        "r": 0.125,
+                        "g": 0.145,
+                        "b": 0.224,
+                        "a": 0.6
+                      },
+                      "cornerRadius": 14,
+                      "children": [
+                        {
+                          "name": "Label",
+                          "type": "TEXT",
+                          "characters": "YTD",
+                          "fontSize": 11,
+                          "fontName": {
+                            "family": "Manrope",
+                            "style": "Medium"
+                          },
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 0.580,
+                                "g": 0.639,
+                                "b": 0.722,
+                                "a": 1
+                              }
+                            }
+                          ],
+                          "textAlignHorizontal": "CENTER",
+                          "x": 14,
+                          "y": 7
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Custom Range",
+                  "type": "FRAME",
+                  "width": 232,
+                  "height": 68,
+                  "layoutMode": "VERTICAL",
+                  "itemSpacing": 8,
+                  "children": [
+                    {
+                      "name": "Start Date",
+                      "type": "FRAME",
+                      "width": 232,
+                      "height": 36,
+                      "backgroundColor": {
+                        "r": 0.125,
+                        "g": 0.145,
+                        "b": 0.224,
+                        "a": 0.4
+                      },
+                      "cornerRadius": 8,
+                      "strokeWeight": 1,
+                      "strokes": [
+                        {
+                          "type": "SOLID",
+                          "color": {
+                            "r": 0.078,
+                            "g": 0.722,
+                            "b": 0.651,
+                            "a": 0.2
+                          }
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "Placeholder",
+                          "type": "TEXT",
+                          "characters": "Start Date",
+                          "fontSize": 12,
+                          "fontName": {
+                            "family": "Manrope",
+                            "style": "Regular"
+                          },
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 0.580,
+                                "g": 0.639,
+                                "b": 0.722,
+                                "a": 0.6
+                              }
+                            }
+                          ],
+                          "x": 12,
+                          "y": 10
+                        }
+                      ]
+                    },
+                    {
+                      "name": "End Date",
+                      "type": "FRAME",
+                      "width": 232,
+                      "height": 36,
+                      "backgroundColor": {
+                        "r": 0.125,
+                        "g": 0.145,
+                        "b": 0.224,
+                        "a": 0.4
+                      },
+                      "cornerRadius": 8,
+                      "strokeWeight": 1,
+                      "strokes": [
+                        {
+                          "type": "SOLID",
+                          "color": {
+                            "r": 0.078,
+                            "g": 0.722,
+                            "b": 0.651,
+                            "a": 0.2
+                          }
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "Placeholder",
+                          "type": "TEXT",
+                          "characters": "End Date",
+                          "fontSize": 12,
+                          "fontName": {
+                            "family": "Manrope",
+                            "style": "Regular"
+                          },
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 0.580,
+                                "g": 0.639,
+                                "b": 0.722,
+                                "a": 0.6
+                              }
+                            }
+                          ],
+                          "x": 12,
+                          "y": 10
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Country Filter",
+              "type": "FRAME",
+              "width": 232,
+              "height": 120,
+              "x": 24,
+              "y": 732,
+              "layoutMode": "VERTICAL",
+              "itemSpacing": 12,
+              "children": [
+                {
+                  "name": "Section Header",
+                  "type": "TEXT",
+                  "characters": "COUNTRIES",
+                  "fontSize": 11,
+                  "fontName": {
+                    "family": "Manrope",
+                    "style": "SemiBold"
+                  },
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": {
+                        "r": 0.580,
+                        "g": 0.639,
+                        "b": 0.722,
+                        "a": 1
+                      }
+                    }
+                  ],
+                  "textCase": "UPPER",
+                  "letterSpacing": 0.5
+                },
+                {
+                  "name": "Country Dropdown",
+                  "type": "FRAME",
+                  "width": 232,
+                  "height": 40,
+                  "backgroundColor": {
+                    "r": 0.125,
+                    "g": 0.145,
+                    "b": 0.224,
+                    "a": 0.4
+                  },
+                  "cornerRadius": 8,
+                  "strokeWeight": 1,
+                  "strokes": [
+                    {
+                      "type": "SOLID",
+                      "color": {
+                        "r": 0.078,
+                        "g": 0.722,
+                        "b": 0.651,
+                        "a": 0.2
+                      }
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "Selected Text",
+                      "type": "TEXT",
+                      "characters": "All Countries",
+                      "fontSize": 13,
+                      "fontName": {
+                        "family": "Manrope",
+                        "style": "Medium"
+                      },
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": {
+                            "r": 1,
+                            "g": 1,
+                            "b": 1,
+                            "a": 1
+                          }
+                        }
+                      ],
+                      "x": 12,
+                      "y": 11
+                    }
+                  ]
+                },
+                {
+                  "name": "Selected Pills",
+                  "type": "FRAME",
+                  "width": 232,
+                  "height": 32,
+                  "layoutMode": "HORIZONTAL",
+                  "itemSpacing": 8,
+                  "children": [
+                    {
+                      "name": "Pill - UK",
+                      "type": "FRAME",
+                      "width": 60,
+                      "height": 24,
+                      "backgroundColor": {
+                        "r": 0.078,
+                        "g": 0.722,
+                        "b": 0.651,
+                        "a": 0.15
+                      },
+                      "cornerRadius": 12,
+                      "children": [
+                        {
+                          "name": "Country",
+                          "type": "TEXT",
+                          "characters": "UK",
+                          "fontSize": 11,
+                          "fontName": {
+                            "family": "Manrope",
+                            "style": "Medium"
+                          },
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 0.078,
+                                "g": 0.722,
+                                "b": 0.651,
+                                "a": 1
+                              }
+                            }
+                          ],
+                          "x": 12,
+                          "y": 5
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Pill - DE",
+                      "type": "FRAME",
+                      "width": 60,
+                      "height": 24,
+                      "backgroundColor": {
+                        "r": 0.078,
+                        "g": 0.722,
+                        "b": 0.651,
+                        "a": 0.15
+                      },
+                      "cornerRadius": 12,
+                      "children": [
+                        {
+                          "name": "Country",
+                          "type": "TEXT",
+                          "characters": "DE",
+                          "fontSize": 11,
+                          "fontName": {
+                            "family": "Manrope",
+                            "style": "Medium"
+                          },
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 0.078,
+                                "g": 0.722,
+                                "b": 0.651,
+                                "a": 1
+                              }
+                            }
+                          ],
+                          "x": 12,
+                          "y": 5
+                        }
+                      ]
+                    },
+                    {
+                      "name": "More Badge",
+                      "type": "FRAME",
+                      "width": 52,
+                      "height": 24,
+                      "backgroundColor": {
+                        "r": 0.125,
+                        "g": 0.145,
+                        "b": 0.224,
+                        "a": 0.6
+                      },
+                      "cornerRadius": 12,
+                      "children": [
+                        {
+                          "name": "Count",
+                          "type": "TEXT",
+                          "characters": "+3",
+                          "fontSize": 11,
+                          "fontName": {
+                            "family": "Manrope",
+                            "style": "Medium"
+                          },
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 0.580,
+                                "g": 0.639,
+                                "b": 0.722,
+                                "a": 1
+                              }
+                            }
+                          ],
+                          "x": 16,
+                          "y": 5
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Action Buttons",
+              "type": "FRAME",
+              "width": 232,
+              "height": 104,
+              "x": 24,
+              "y": 1072,
+              "layoutMode": "VERTICAL",
+              "itemSpacing": 12,
+              "children": [
+                {
+                  "name": "Apply Filters Button",
+                  "type": "FRAME",
+                  "width": 232,
+                  "height": 44,
+                  "fills": [
+                    {
+                      "type": "GRADIENT_LINEAR",
+                      "gradientStops": [
+                        {
+                          "position": 0,
+                          "color": {
+                            "r": 0.078,
+                            "g": 0.722,
+                            "b": 0.651,
+                            "a": 1
+                          }
+                        },
+                        {
+                          "position": 1,
+                          "color": {
+                            "r": 0.078,
+                            "g": 0.882,
+                            "b": 0.588,
+                            "a": 1
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "cornerRadius": 12,
+                  "children": [
+                    {
+                      "name": "Button Text",
+                      "type": "TEXT",
+                      "characters": "Apply Filters (5)",
+                      "fontSize": 14,
+                      "fontName": {
+                        "family": "Manrope",
+                        "style": "Bold"
+                      },
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": {
+                            "r": 1,
+                            "g": 1,
+                            "b": 1,
+                            "a": 1
+                          }
+                        }
+                      ],
+                      "textAlignHorizontal": "CENTER",
+                      "x": 70,
+                      "y": 13
+                    }
+                  ]
+                },
+                {
+                  "name": "Reset Button",
+                  "type": "FRAME",
+                  "width": 232,
+                  "height": 44,
+                  "backgroundColor": {
+                    "r": 0.125,
+                    "g": 0.145,
+                    "b": 0.224,
+                    "a": 0.6
+                  },
+                  "cornerRadius": 12,
+                  "strokeWeight": 1,
+                  "strokes": [
+                    {
+                      "type": "SOLID",
+                      "color": {
+                        "r": 0.078,
+                        "g": 0.722,
+                        "b": 0.651,
+                        "a": 0.3
+                      }
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "Button Text",
+                      "type": "TEXT",
+                      "characters": "Reset All",
+                      "fontSize": 14,
+                      "fontName": {
+                        "family": "Manrope",
+                        "style": "Medium"
+                      },
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": {
+                            "r": 1,
+                            "g": 1,
+                            "b": 1,
+                            "a": 1
+                          }
+                        }
+                      ],
+                      "textAlignHorizontal": "CENTER",
+                      "x": 85,
+                      "y": 13
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Right Panel - Report Content",
+          "type": "FRAME",
+          "width": 832,
+          "height": 3680,
+          "layoutMode": "VERTICAL",
+          "itemSpacing": 24,
+          "children": [
+            {
+              "name": "Report Header",
+              "type": "FRAME",
+              "width": 832,
+              "height": 140,
+              "backgroundColor": {
+                "r": 0.102,
+                "g": 0.122,
+                "b": 0.180,
+                "a": 0.8
+              },
+              "cornerRadius": 16,
+              "strokeWeight": 1,
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": {
+                    "r": 0.078,
+                    "g": 0.722,
+                    "b": 0.651,
+                    "a": 0.15
+                  }
+                }
+              ],
+              "effects": [
+                {
+                  "type": "BACKGROUND_BLUR",
+                  "radius": 20,
+                  "visible": true
+                }
+              ],
+              "children": [
+                {
+                  "name": "Left Content",
+                  "type": "FRAME",
+                  "width": 500,
+                  "height": 100,
+                  "x": 32,
+                  "y": 20,
+                  "layoutMode": "HORIZONTAL",
+                  "itemSpacing": 20,
+                  "children": [
+                    {
+                      "name": "Report Icon",
+                      "type": "FRAME",
+                      "width": 56,
+                      "height": 56,
+                      "fills": [
+                        {
+                          "type": "GRADIENT_LINEAR",
+                          "gradientStops": [
+                            {
+                              "position": 0,
+                              "color": {
+                                "r": 0.078,
+                                "g": 0.722,
+                                "b": 0.651,
+                                "a": 0.2
+                              }
+                            },
+                            {
+                              "position": 1,
+                              "color": {
+                                "r": 0.078,
+                                "g": 0.882,
+                                "b": 0.588,
+                                "a": 0.2
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "cornerRadius": 28
+                    },
+                    {
+                      "name": "Report Details",
+                      "type": "FRAME",
+                      "width": 400,
+                      "height": 100,
+                      "layoutMode": "VERTICAL",
+                      "itemSpacing": 6,
+                      "children": [
+                        {
+                          "name": "Report Title",
+                          "type": "TEXT",
+                          "characters": "VAT Summary Report",
+                          "fontSize": 24,
+                          "fontName": {
+                            "family": "Manrope",
+                            "style": "Bold"
+                          },
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 1,
+                                "g": 1,
+                                "b": 1,
+                                "a": 1
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Description",
+                          "type": "TEXT",
+                          "characters": "Comprehensive overview of VAT activity",
+                          "fontSize": 13,
+                          "fontName": {
+                            "family": "Manrope",
+                            "style": "Regular"
+                          },
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 0.580,
+                                "g": 0.639,
+                                "b": 0.722,
+                                "a": 1
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Date Range",
+                          "type": "TEXT",
+                          "characters": "January 1 - December 31, 2024",
+                          "fontSize": 12,
+                          "fontName": {
+                            "family": "Manrope",
+                            "style": "Medium"
+                          },
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 0.580,
+                                "g": 0.639,
+                                "b": 0.722,
+                                "a": 0.8
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Generated Time",
+                          "type": "TEXT",
+                          "characters": "Generated: Jan 15, 2025 at 2:30 PM",
+                          "fontSize": 10,
+                          "fontName": {
+                            "family": "Manrope",
+                            "style": "Regular"
+                          },
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 0.580,
+                                "g": 0.639,
+                                "b": 0.722,
+                                "a": 0.6
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Right Actions",
+                  "type": "FRAME",
+                  "width": 200,
+                  "height": 80,
+                  "x": 600,
+                  "y": 30,
+                  "layoutMode": "VERTICAL",
+                  "itemSpacing": 8,
+                  "children": [
+                    {
+                      "name": "Report ID",
+                      "type": "TEXT",
+                      "characters": "RPT-2025-001234",
+                      "fontSize": 11,
+                      "fontName": {
+                        "family": "Manrope",
+                        "style": "Regular"
+                      },
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": {
+                            "r": 0.580,
+                            "g": 0.639,
+                            "b": 0.722,
+                            "a": 0.8
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Action Icons",
+                      "type": "FRAME",
+                      "width": 120,
+                      "height": 32,
+                      "layoutMode": "HORIZONTAL",
+                      "itemSpacing": 8,
+                      "children": [
+                        {
+                          "name": "Download Icon",
+                          "type": "FRAME",
+                          "width": 32,
+                          "height": 32,
+                          "backgroundColor": {
+                            "r": 0.125,
+                            "g": 0.145,
+                            "b": 0.224,
+                            "a": 0.6
+                          },
+                          "cornerRadius": 8,
+                          "children": [
+                            {
+                              "name": "Icon",
+                              "type": "RECTANGLE",
+                              "width": 16,
+                              "height": 16,
+                              "x": 8,
+                              "y": 8,
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": {
+                                    "r": 0.078,
+                                    "g": 0.722,
+                                    "b": 0.651,
+                                    "a": 1
+                                  }
+                                }
+                              ],
+                              "cornerRadius": 2
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Share Icon",
+                          "type": "FRAME",
+                          "width": 32,
+                          "height": 32,
+                          "backgroundColor": {
+                            "r": 0.125,
+                            "g": 0.145,
+                            "b": 0.224,
+                            "a": 0.6
+                          },
+                          "cornerRadius": 8,
+                          "children": [
+                            {
+                              "name": "Icon",
+                              "type": "RECTANGLE",
+                              "width": 16,
+                              "height": 16,
+                              "x": 8,
+                              "y": 8,
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": {
+                                    "r": 0.078,
+                                    "g": 0.722,
+                                    "b": 0.651,
+                                    "a": 1
+                                  }
+                                }
+                              ],
+                              "cornerRadius": 2
+                            }
+                          ]
+                        },
+                        {
+                          "name": "More Icon",
+                          "type": "FRAME",
+                          "width": 32,
+                          "height": 32,
+                          "backgroundColor": {
+                            "r": 0.125,
+                            "g": 0.145,
+                            "b": 0.224,
+                            "a": 0.6
+                          },
+                          "cornerRadius": 8,
+                          "children": [
+                            {
+                              "name": "Icon",
+                              "type": "RECTANGLE",
+                              "width": 4,
+                              "height": 16,
+                              "x": 14,
+                              "y": 8,
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": {
+                                    "r": 0.078,
+                                    "g": 0.722,
+                                    "b": 0.651,
+                                    "a": 1
+                                  }
+                                }
+                              ],
+                              "cornerRadius": 2
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Key Metrics Grid",
+              "type": "FRAME",
+              "width": 832,
+              "height": 200,
+              "layoutMode": "HORIZONTAL",
+              "itemSpacing": 16,
+              "children": [
+                {
+                  "name": "Metric Card - Output VAT",
+                  "type": "FRAME",
+                  "width": 200,
+                  "height": 200,
+                  "backgroundColor": {
+                    "r": 0.102,
+                    "g": 0.122,
+                    "b": 0.180,
+                    "a": 0.6
+                  },
+                  "cornerRadius": 16,
+                  "strokeWeight": 1,
+                  "strokes": [
+                    {
+                      "type": "SOLID",
+                      "color": {
+                        "r": 0.078,
+                        "g": 0.722,
+                        "b": 0.651,
+                        "a": 0.15
+                      }
+                    }
+                  ],
+                  "effects": [
+                    {
+                      "type": "BACKGROUND_BLUR",
+                      "radius": 20,
+                      "visible": true
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "Icon Circle",
+                      "type": "FRAME",
+                      "width": 40,
+                      "height": 40,
+                      "x": 140,
+                      "y": 16,
+                      "fills": [
+                        {
+                          "type": "GRADIENT_LINEAR",
+                          "gradientStops": [
+                            {
+                              "position": 0,
+                              "color": {
+                                "r": 0.078,
+                                "g": 0.882,
+                                "b": 0.588,
+                                "a": 0.2
+                              }
+                            },
+                            {
+                              "position": 1,
+                              "color": {
+                                "r": 0.078,
+                                "g": 0.882,
+                                "b": 0.588,
+                                "a": 0.1
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "cornerRadius": 20
+                    },
+                    {
+                      "name": "Label",
+                      "type": "TEXT",
+                      "characters": "TOTAL OUTPUT VAT",
+                      "fontSize": 10,
+                      "fontName": {
+                        "family": "Manrope",
+                        "style": "SemiBold"
+                      },
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": {
+                            "r": 0.580,
+                            "g": 0.639,
+                            "b": 0.722,
+                            "a": 1
+                          }
+                        }
+                      ],
+                      "textCase": "UPPER",
+                      "letterSpacing": 0.5,
+                      "x": 20,
+                      "y": 20
+                    },
+                    {
+                      "name": "Value",
+                      "type": "TEXT",
+                      "characters": "€1,458,920",
+                      "fontSize": 32,
+                      "fontName": {
+                        "family": "Manrope",
+                        "style": "Bold"
+                      },
+                      "fills": [
+                        {
+                          "type": "GRADIENT_LINEAR",
+                          "gradientStops": [
+                            {
+                              "position": 0,
+                              "color": {
+                                "r": 0.078,
+                                "g": 0.722,
+                                "b": 0.651,
+                                "a": 1
+                              }
+                            },
+                            {
+                              "position": 1,
+                              "color": {
+                                "r": 0.078,
+                                "g": 0.882,
+                                "b": 0.588,
+                                "a": 1
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "x": 20,
+                      "y": 60
+                    },
+                    {
+                      "name": "Change",
+                      "type": "TEXT",
+                      "characters": "+18.5% vs previous period",
+                      "fontSize": 11,
+                      "fontName": {
+                        "family": "Manrope",
+                        "style": "Regular"
+                      },
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": {
+                            "r": 0.078,
+                            "g": 0.882,
+                            "b": 0.588,
+                            "a": 1
+                          }
+                        }
+                      ],
+                      "x": 20,
+                      "y": 110
+                    },
+                    {
+                      "name": "Mini Chart",
+                      "type": "FRAME",
+                      "width": 160,
+                      "height": 40,
+                      "x": 20,
+                      "y": 140,
+                      "children": [
+                        {
+                          "name": "Sparkline Path",
+                          "type": "VECTOR",
+                          "width": 160,
+                          "height": 40,
+                          "fills": [],
+                          "strokes": [
+                            {
+                              "type": "GRADIENT_LINEAR",
+                              "gradientStops": [
+                                {
+                                  "position": 0,
+                                  "color": {
+                                    "r": 0.078,
+                                    "g": 0.722,
+                                    "b": 0.651,
+                                    "a": 1
+                                  }
+                                },
+                                {
+                                  "position": 1,
+                                  "color": {
+                                    "r": 0.078,
+                                    "g": 0.882,
+                                    "b": 0.588,
+                                    "a": 1
+                                  }
+                                }
+                              ]
+                            }
+                          ],
+                          "strokeWeight": 2
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Metric Card - Input VAT",
+                  "type": "FRAME",
+                  "width": 200,
+                  "height": 200,
+                  "backgroundColor": {
+                    "r": 0.102,
+                    "g": 0.122,
+                    "b": 0.180,
+                    "a": 0.6
+                  },
+                  "cornerRadius": 16,
+                  "strokeWeight": 1,
+                  "strokes": [
+                    {
+                      "type": "SOLID",
+                      "color": {
+                        "r": 0.078,
+                        "g": 0.722,
+                        "b": 0.651,
+                        "a": 0.15
+                      }
+                    }
+                  ],
+                  "effects": [
+                    {
+                      "type": "BACKGROUND_BLUR",
+                      "radius": 20,
+                      "visible": true
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "Icon Circle",
+                      "type": "FRAME",
+                      "width": 40,
+                      "height": 40,
+                      "x": 140,
+                      "y": 16,
+                      "fills": [
+                        {
+                          "type": "GRADIENT_LINEAR",
+                          "gradientStops": [
+                            {
+                              "position": 0,
+                              "color": {
+                                "r": 0.231,
+                                "g": 0.510,
+                                "b": 0.965,
+                                "a": 0.2
+                              }
+                            },
+                            {
+                              "position": 1,
+                              "color": {
+                                "r": 0.231,
+                                "g": 0.510,
+                                "b": 0.965,
+                                "a": 0.1
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "cornerRadius": 20
+                    },
+                    {
+                      "name": "Label",
+                      "type": "TEXT",
+                      "characters": "TOTAL INPUT VAT",
+                      "fontSize": 10,
+                      "fontName": {
+                        "family": "Manrope",
+                        "style": "SemiBold"
+                      },
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": {
+                            "r": 0.580,
+                            "g": 0.639,
+                            "b": 0.722,
+                            "a": 1
+                          }
+                        }
+                      ],
+                      "textCase": "UPPER",
+                      "letterSpacing": 0.5,
+                      "x": 20,
+                      "y": 20
+                    },
+                    {
+                      "name": "Value",
+                      "type": "TEXT",
+                      "characters": "€542,180",
+                      "fontSize": 32,
+                      "fontName": {
+                        "family": "Manrope",
+                        "style": "Bold"
+                      },
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": {
+                            "r": 1,
+                            "g": 1,
+                            "b": 1,
+                            "a": 1
+                          }
+                        }
+                      ],
+                      "x": 20,
+                      "y": 60
+                    },
+                    {
+                      "name": "Change",
+                      "type": "TEXT",
+                      "characters": "+12.3% vs previous period",
+                      "fontSize": 11,
+                      "fontName": {
+                        "family": "Manrope",
+                        "style": "Regular"
+                      },
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": {
+                            "r": 0.078,
+                            "g": 0.882,
+                            "b": 0.588,
+                            "a": 1
+                          }
+                        }
+                      ],
+                      "x": 20,
+                      "y": 110
+                    },
+                    {
+                      "name": "Subtitle",
+                      "type": "TEXT",
+                      "characters": "Reclaimable amount",
+                      "fontSize": 10,
+                      "fontName": {
+                        "family": "Manrope",
+                        "style": "Regular"
+                      },
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": {
+                            "r": 0.580,
+                            "g": 0.639,
+                            "b": 0.722,
+                            "a": 0.8
+                          }
+                        }
+                      ],
+                      "x": 20,
+                      "y": 130
+                    }
+                  ]
+                },
+                {
+                  "name": "Metric Card - Net VAT",
+                  "type": "FRAME",
+                  "width": 200,
+                  "height": 200,
+                  "backgroundColor": {
+                    "r": 0.102,
+                    "g": 0.122,
+                    "b": 0.180,
+                    "a": 0.6
+                  },
+                  "cornerRadius": 16,
+                  "strokeWeight": 2,
+                  "strokes": [
+                    {
+                      "type": "SOLID",
+                      "color": {
+                        "r": 0.078,
+                        "g": 0.722,
+                        "b": 0.651,
+                        "a": 0.3
+                      }
+                    }
+                  ],
+                  "effects": [
+                    {
+                      "type": "BACKGROUND_BLUR",
+                      "radius": 20,
+                      "visible": true
+                    },
+                    {
+                      "type": "DROP_SHADOW",
+                      "color": {
+                        "r": 0.078,
+                        "g": 0.722,
+                        "b": 0.651,
+                        "a": 0.2
+                      },
+                      "offset": {
+                        "x": 0,
+                        "y": 4
+                      },
+                      "radius": 16,
+                      "spread": 0,
+                      "visible": true
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "Icon Circle",
+                      "type": "FRAME",
+                      "width": 40,
+                      "height": 40,
+                      "x": 140,
+                      "y": 16,
+                      "fills": [
+                        {
+                          "type": "GRADIENT_LINEAR",
+                          "gradientStops": [
+                            {
+                              "position": 0,
+                              "color": {
+                                "r": 0.078,
+                                "g": 0.722,
+                                "b": 0.651,
+                                "a": 0.3
+                              }
+                            },
+                            {
+                              "position": 1,
+                              "color": {
+                                "r": 0.078,
+                                "g": 0.882,
+                                "b": 0.588,
+                                "a": 0.2
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "cornerRadius": 20
+                    },
+                    {
+                      "name": "Label",
+                      "type": "TEXT",
+                      "characters": "NET VAT POSITION",
+                      "fontSize": 10,
+                      "fontName": {
+                        "family": "Manrope",
+                        "style": "SemiBold"
+                      },
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": {
+                            "r": 0.580,
+                            "g": 0.639,
+                            "b": 0.722,
+                            "a": 1
+                          }
+                        }
+                      ],
+                      "textCase": "UPPER",
+                      "letterSpacing": 0.5,
+                      "x": 20,
+                      "y": 20
+                    },
+                    {
+                      "name": "Value",
+                      "type": "TEXT",
+                      "characters": "€916,740",
+                      "fontSize": 36,
+                      "fontName": {
+                        "family": "Manrope",
+                        "style": "Bold"
+                      },
+                      "fills": [
+                        {
+                          "type": "GRADIENT_LINEAR",
+                          "gradientStops": [
+                            {
+                              "position": 0,
+                              "color": {
+                                "r": 0.078,
+                                "g": 0.722,
+                                "b": 0.651,
+                                "a": 1
+                              }
+                            },
+                            {
+                              "position": 1,
+                              "color": {
+                                "r": 0.078,
+                                "g": 0.882,
+                                "b": 0.588,
+                                "a": 1
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "x": 20,
+                      "y": 60
+                    },
+                    {
+                      "name": "Status Badge",
+                      "type": "FRAME",
+                      "width": 80,
+                      "height": 24,
+                      "x": 20,
+                      "y": 120,
+                      "backgroundColor": {
+                        "r": 1,
+                        "g": 0.278,
+                        "b": 0.341,
+                        "a": 0.15
+                      },
+                      "cornerRadius": 12,
+                      "children": [
+                        {
+                          "name": "Status",
+                          "type": "TEXT",
+                          "characters": "Payable",
+                          "fontSize": 11,
+                          "fontName": {
+                            "family": "Manrope",
+                            "style": "SemiBold"
+                          },
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 1,
+                                "g": 0.278,
+                                "b": 0.341,
+                                "a": 1
+                              }
+                            }
+                          ],
+                          "textAlignHorizontal": "CENTER",
+                          "x": 16,
+                          "y": 5
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Subtitle",
+                      "type": "TEXT",
+                      "characters": "Across all periods",
+                      "fontSize": 10,
+                      "fontName": {
+                        "family": "Manrope",
+                        "style": "Regular"
+                      },
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": {
+                            "r": 0.580,
+                            "g": 0.639,
+                            "b": 0.722,
+                            "a": 0.8
+                          }
+                        }
+                      ],
+                      "x": 20,
+                      "y": 155
+                    }
+                  ]
+                },
+                {
+                  "name": "Metric Card - Average Rate",
+                  "type": "FRAME",
+                  "width": 200,
+                  "height": 200,
+                  "backgroundColor": {
+                    "r": 0.102,
+                    "g": 0.122,
+                    "b": 0.180,
+                    "a": 0.6
+                  },
+                  "cornerRadius": 16,
+                  "strokeWeight": 1,
+                  "strokes": [
+                    {
+                      "type": "SOLID",
+                      "color": {
+                        "r": 0.078,
+                        "g": 0.722,
+                        "b": 0.651,
+                        "a": 0.15
+                      }
+                    }
+                  ],
+                  "effects": [
+                    {
+                      "type": "BACKGROUND_BLUR",
+                      "radius": 20,
+                      "visible": true
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "Icon Circle",
+                      "type": "FRAME",
+                      "width": 40,
+                      "height": 40,
+                      "x": 140,
+                      "y": 16,
+                      "fills": [
+                        {
+                          "type": "GRADIENT_LINEAR",
+                          "gradientStops": [
+                            {
+                              "position": 0,
+                              "color": {
+                                "r": 0.580,
+                                "g": 0.639,
+                                "b": 0.722,
+                                "a": 0.2
+                              }
+                            },
+                            {
+                              "position": 1,
+                              "color": {
+                                "r": 0.580,
+                                "g": 0.639,
+                                "b": 0.722,
+                                "a": 0.1
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "cornerRadius": 20
+                    },
+                    {
+                      "name": "Label",
+                      "type": "TEXT",
+                      "characters": "EFFECTIVE VAT RATE",
+                      "fontSize": 10,
+                      "fontName": {
+                        "family": "Manrope",
+                        "style": "SemiBold"
+                      },
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": {
+                            "r": 0.580,
+                            "g": 0.639,
+                            "b": 0.722,
+                            "a": 1
+                          }
+                        }
+                      ],
+                      "textCase": "UPPER",
+                      "letterSpacing": 0.5,
+                      "x": 20,
+                      "y": 20
+                    },
+                    {
+                      "name": "Value",
+                      "type": "TEXT",
+                      "characters": "19.8%",
+                      "fontSize": 32,
+                      "fontName": {
+                        "family": "Manrope",
+                        "style": "Bold"
+                      },
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": {
+                            "r": 1,
+                            "g": 1,
+                            "b": 1,
+                            "a": 1
+                          }
+                        }
+                      ],
+                      "x": 20,
+                      "y": 60
+                    },
+                    {
+                      "name": "Comparison",
+                      "type": "TEXT",
+                      "characters": "Standard: 20%",
+                      "fontSize": 11,
+                      "fontName": {
+                        "family": "Manrope",
+                        "style": "Regular"
+                      },
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": {
+                            "r": 0.580,
+                            "g": 0.639,
+                            "b": 0.722,
+                            "a": 1
+                          }
+                        }
+                      ],
+                      "x": 20,
+                      "y": 110
+                    },
+                    {
+                      "name": "Subtitle",
+                      "type": "TEXT",
+                      "characters": "Weighted average",
+                      "fontSize": 10,
+                      "fontName": {
+                        "family": "Manrope",
+                        "style": "Regular"
+                      },
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": {
+                            "r": 0.580,
+                            "g": 0.639,
+                            "b": 0.722,
+                            "a": 0.8
+                          }
+                        }
+                      ],
+                      "x": 20,
+                      "y": 130
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Charts Row 1",
+              "type": "FRAME",
+              "width": 832,
+              "height": 450,
+              "layoutMode": "HORIZONTAL",
+              "itemSpacing": 24,
+              "children": [
+                {
+                  "name": "Chart Card - VAT Trends",
+                  "type": "FRAME",
+                  "width": 500,
+                  "height": 450,
+                  "backgroundColor": {
+                    "r": 0.102,
+                    "g": 0.122,
+                    "b": 0.180,
+                    "a": 0.6
+                  },
+                  "cornerRadius": 16,
+                  "strokeWeight": 1,
+                  "strokes": [
+                    {
+                      "type": "SOLID",
+                      "color": {
+                        "r": 0.078,
+                        "g": 0.722,
+                        "b": 0.651,
+                        "a": 0.15
+                      }
+                    }
+                  ],
+                  "effects": [
+                    {
+                      "type": "BACKGROUND_BLUR",
+                      "radius": 20,
+                      "visible": true
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "Chart Header",
+                      "type": "FRAME",
+                      "width": 452,
+                      "height": 60,
+                      "x": 24,
+                      "y": 24,
+                      "children": [
+                        {
+                          "name": "Title",
+                          "type": "TEXT",
+                          "characters": "VAT Collection Trends",
+                          "fontSize": 18,
+                          "fontName": {
+                            "family": "Manrope",
+                            "style": "SemiBold"
+                          },
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 1,
+                                "g": 1,
+                                "b": 1,
+                                "a": 1
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Subtitle",
+                          "type": "TEXT",
+                          "characters": "Monthly breakdown of VAT collected and paid",
+                          "fontSize": 12,
+                          "fontName": {
+                            "family": "Manrope",
+                            "style": "Regular"
+                          },
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 0.580,
+                                "g": 0.639,
+                                "b": 0.722,
+                                "a": 1
+                              }
+                            }
+                          ],
+                          "y": 30
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Chart Area",
+                      "type": "FRAME",
+                      "width": 452,
+                      "height": 340,
+                      "x": 24,
+                      "y": 90,
+                      "children": [
+                        {
+                          "name": "Chart Placeholder",
+                          "type": "RECTANGLE",
+                          "width": 452,
+                          "height": 300,
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 0.078,
+                                "g": 0.722,
+                                "b": 0.651,
+                                "a": 0.05
+                              }
+                            }
+                          ],
+                          "cornerRadius": 8
+                        },
+                        {
+                          "name": "Chart Label",
+                          "type": "TEXT",
+                          "characters": "[Line Chart: Monthly VAT Trends]",
+                          "fontSize": 14,
+                          "fontName": {
+                            "family": "Manrope",
+                            "style": "Medium"
+                          },
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 0.580,
+                                "g": 0.639,
+                                "b": 0.722,
+                                "a": 0.6
+                              }
+                            }
+                          ],
+                          "textAlignHorizontal": "CENTER",
+                          "x": 120,
+                          "y": 140
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Chart Card - By Country",
+                  "type": "FRAME",
+                  "width": 308,
+                  "height": 450,
+                  "backgroundColor": {
+                    "r": 0.102,
+                    "g": 0.122,
+                    "b": 0.180,
+                    "a": 0.6
+                  },
+                  "cornerRadius": 16,
+                  "strokeWeight": 1,
+                  "strokes": [
+                    {
+                      "type": "SOLID",
+                      "color": {
+                        "r": 0.078,
+                        "g": 0.722,
+                        "b": 0.651,
+                        "a": 0.15
+                      }
+                    }
+                  ],
+                  "effects": [
+                    {
+                      "type": "BACKGROUND_BLUR",
+                      "radius": 20,
+                      "visible": true
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "Chart Header",
+                      "type": "FRAME",
+                      "width": 260,
+                      "height": 60,
+                      "x": 24,
+                      "y": 24,
+                      "children": [
+                        {
+                          "name": "Title",
+                          "type": "TEXT",
+                          "characters": "VAT by Country",
+                          "fontSize": 18,
+                          "fontName": {
+                            "family": "Manrope",
+                            "style": "SemiBold"
+                          },
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 1,
+                                "g": 1,
+                                "b": 1,
+                                "a": 1
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Subtitle",
+                          "type": "TEXT",
+                          "characters": "Distribution across jurisdictions",
+                          "fontSize": 12,
+                          "fontName": {
+                            "family": "Manrope",
+                            "style": "Regular"
+                          },
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 0.580,
+                                "g": 0.639,
+                                "b": 0.722,
+                                "a": 1
+                              }
+                            }
+                          ],
+                          "y": 30
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Donut Chart",
+                      "type": "FRAME",
+                      "width": 220,
+                      "height": 220,
+                      "x": 44,
+                      "y": 100,
+                      "children": [
+                        {
+                          "name": "Outer Circle",
+                          "type": "ELLIPSE",
+                          "width": 200,
+                          "height": 200,
+                          "x": 10,
+                          "y": 10,
+                          "strokeWeight": 40,
+                          "strokes": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 0.078,
+                                "g": 0.722,
+                                "b": 0.651,
+                                "a": 0.3
+                              }
+                            }
+                          ],
+                          "fills": []
+                        },
+                        {
+                          "name": "Center Value",
+                          "type": "TEXT",
+                          "characters": "€1.46M",
+                          "fontSize": 24,
+                          "fontName": {
+                            "family": "Manrope",
+                            "style": "Bold"
+                          },
+                          "fills": [
+                            {
+                              "type": "GRADIENT_LINEAR",
+                              "gradientStops": [
+                                {
+                                  "position": 0,
+                                  "color": {
+                                    "r": 0.078,
+                                    "g": 0.722,
+                                    "b": 0.651,
+                                    "a": 1
+                                  }
+                                },
+                                {
+                                  "position": 1,
+                                  "color": {
+                                    "r": 0.078,
+                                    "g": 0.882,
+                                    "b": 0.588,
+                                    "a": 1
+                                  }
+                                }
+                              ]
+                            }
+                          ],
+                          "textAlignHorizontal": "CENTER",
+                          "x": 60,
+                          "y": 90
+                        },
+                        {
+                          "name": "Center Label",
+                          "type": "TEXT",
+                          "characters": "Total VAT",
+                          "fontSize": 12,
+                          "fontName": {
+                            "family": "Manrope",
+                            "style": "Regular"
+                          },
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 0.580,
+                                "g": 0.639,
+                                "b": 0.722,
+                                "a": 1
+                              }
+                            }
+                          ],
+                          "textAlignHorizontal": "CENTER",
+                          "x": 75,
+                          "y": 120
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Legend",
+                      "type": "FRAME",
+                      "width": 260,
+                      "height": 100,
+                      "x": 24,
+                      "y": 330,
+                      "layoutMode": "VERTICAL",
+                      "itemSpacing": 8,
+                      "children": [
+                        {
+                          "name": "Legend Item - UK",
+                          "type": "FRAME",
+                          "width": 260,
+                          "height": 20,
+                          "layoutMode": "HORIZONTAL",
+                          "itemSpacing": 8,
+                          "children": [
+                            {
+                              "name": "Color Dot",
+                              "type": "ELLIPSE",
+                              "width": 10,
+                              "height": 10,
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": {
+                                    "r": 0.078,
+                                    "g": 0.722,
+                                    "b": 0.651,
+                                    "a": 1
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Country",
+                              "type": "TEXT",
+                              "characters": "United Kingdom",
+                              "fontSize": 12,
+                              "fontName": {
+                                "family": "Manrope",
+                                "style": "Regular"
+                              },
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": {
+                                    "r": 0.580,
+                                    "g": 0.639,
+                                    "b": 0.722,
+                                    "a": 1
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Value",
+                              "type": "TEXT",
+                              "characters": "€580K (39.8%)",
+                              "fontSize": 12,
+                              "fontName": {
+                                "family": "Manrope",
+                                "style": "Medium"
+                              },
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": {
+                                    "r": 1,
+                                    "g": 1,
+                                    "b": 1,
+                                    "a": 1
+                                  }
+                                }
+                              ],
+                              "x": 160
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Legend Item - Germany",
+                          "type": "FRAME",
+                          "width": 260,
+                          "height": 20,
+                          "layoutMode": "HORIZONTAL",
+                          "itemSpacing": 8,
+                          "children": [
+                            {
+                              "name": "Color Dot",
+                              "type": "ELLIPSE",
+                              "width": 10,
+                              "height": 10,
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": {
+                                    "r": 0.078,
+                                    "g": 0.882,
+                                    "b": 0.588,
+                                    "a": 1
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Country",
+                              "type": "TEXT",
+                              "characters": "Germany",
+                              "fontSize": 12,
+                              "fontName": {
+                                "family": "Manrope",
+                                "style": "Regular"
+                              },
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": {
+                                    "r": 0.580,
+                                    "g": 0.639,
+                                    "b": 0.722,
+                                    "a": 1
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Value",
+                              "type": "TEXT",
+                              "characters": "€420K (28.8%)",
+                              "fontSize": 12,
+                              "fontName": {
+                                "family": "Manrope",
+                                "style": "Medium"
+                              },
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": {
+                                    "r": 1,
+                                    "g": 1,
+                                    "b": 1,
+                                    "a": 1
+                                  }
+                                }
+                              ],
+                              "x": 160
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Legend Item - France",
+                          "type": "FRAME",
+                          "width": 260,
+                          "height": 20,
+                          "layoutMode": "HORIZONTAL",
+                          "itemSpacing": 8,
+                          "children": [
+                            {
+                              "name": "Color Dot",
+                              "type": "ELLIPSE",
+                              "width": 10,
+                              "height": 10,
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": {
+                                    "r": 0.231,
+                                    "g": 0.510,
+                                    "b": 0.965,
+                                    "a": 1
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Country",
+                              "type": "TEXT",
+                              "characters": "France",
+                              "fontSize": 12,
+                              "fontName": {
+                                "family": "Manrope",
+                                "style": "Regular"
+                              },
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": {
+                                    "r": 0.580,
+                                    "g": 0.639,
+                                    "b": 0.722,
+                                    "a": 1
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Value",
+                              "type": "TEXT",
+                              "characters": "€280K (19.2%)",
+                              "fontSize": 12,
+                              "fontName": {
+                                "family": "Manrope",
+                                "style": "Medium"
+                              },
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": {
+                                    "r": 1,
+                                    "g": 1,
+                                    "b": 1,
+                                    "a": 1
+                                  }
+                                }
+                              ],
+                              "x": 160
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Transaction Table Card",
+              "type": "FRAME",
+              "width": 832,
+              "height": 800,
+              "backgroundColor": {
+                "r": 0.102,
+                "g": 0.122,
+                "b": 0.180,
+                "a": 0.6
+              },
+              "cornerRadius": 16,
+              "strokeWeight": 1,
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": {
+                    "r": 0.078,
+                    "g": 0.722,
+                    "b": 0.651,
+                    "a": 0.15
+                  }
+                }
+              ],
+              "effects": [
+                {
+                  "type": "BACKGROUND_BLUR",
+                  "radius": 20,
+                  "visible": true
+                }
+              ],
+              "children": [
+                {
+                  "name": "Table Header",
+                  "type": "FRAME",
+                  "width": 784,
+                  "height": 60,
+                  "x": 24,
+                  "y": 24,
+                  "children": [
+                    {
+                      "name": "Title",
+                      "type": "TEXT",
+                      "characters": "Transaction Details",
+                      "fontSize": 18,
+                      "fontName": {
+                        "family": "Manrope",
+                        "style": "SemiBold"
+                      },
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": {
+                            "r": 1,
+                            "g": 1,
+                            "b": 1,
+                            "a": 1
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Subtitle",
+                      "type": "TEXT",
+                      "characters": "Detailed view of all transactions in selected period",
+                      "fontSize": 12,
+                      "fontName": {
+                        "family": "Manrope",
+                        "style": "Regular"
+                      },
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": {
+                            "r": 0.580,
+                            "g": 0.639,
+                            "b": 0.722,
+                            "a": 1
+                          }
+                        }
+                      ],
+                      "y": 30
+                    },
+                    {
+                      "name": "Export Button",
+                      "type": "FRAME",
+                      "width": 120,
+                      "height": 36,
+                      "x": 664,
+                      "y": 12,
+                      "backgroundColor": {
+                        "r": 0.125,
+                        "g": 0.145,
+                        "b": 0.224,
+                        "a": 0.6
+                      },
+                      "cornerRadius": 10,
+                      "children": [
+                        {
+                          "name": "Button Text",
+                          "type": "TEXT",
+                          "characters": "Export Table",
+                          "fontSize": 12,
+                          "fontName": {
+                            "family": "Manrope",
+                            "style": "Medium"
+                          },
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 1,
+                                "g": 1,
+                                "b": 1,
+                                "a": 1
+                              }
+                            }
+                          ],
+                          "x": 20,
+                          "y": 10
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Table Content",
+                  "type": "FRAME",
+                  "width": 784,
+                  "height": 640,
+                  "x": 24,
+                  "y": 96,
+                  "children": [
+                    {
+                      "name": "Table Header Row",
+                      "type": "FRAME",
+                      "width": 784,
+                      "height": 44,
+                      "backgroundColor": {
+                        "r": 0.078,
+                        "g": 0.722,
+                        "b": 0.651,
+                        "a": 0.05
+                      },
+                      "strokeWeight": 2,
+                      "strokes": [
+                        {
+                          "type": "SOLID",
+                          "color": {
+                            "r": 0.078,
+                            "g": 0.722,
+                            "b": 0.651,
+                            "a": 0.2
+                          }
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "Column Headers",
+                          "type": "FRAME",
+                          "width": 784,
+                          "height": 44,
+                          "layoutMode": "HORIZONTAL",
+                          "children": [
+                            {
+                              "name": "Date Header",
+                              "type": "TEXT",
+                              "characters": "DATE",
+                              "fontSize": 10,
+                              "fontName": {
+                                "family": "Manrope",
+                                "style": "SemiBold"
+                              },
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": {
+                                    "r": 0.803,
+                                    "g": 0.835,
+                                    "b": 0.882,
+                                    "a": 1
+                                  }
+                                }
+                              ],
+                              "textCase": "UPPER",
+                              "letterSpacing": 0.5,
+                              "x": 12,
+                              "y": 15
+                            },
+                            {
+                              "name": "ID Header",
+                              "type": "TEXT",
+                              "characters": "TRANSACTION ID",
+                              "fontSize": 10,
+                              "fontName": {
+                                "family": "Manrope",
+                                "style": "SemiBold"
+                              },
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": {
+                                    "r": 0.803,
+                                    "g": 0.835,
+                                    "b": 0.882,
+                                    "a": 1
+                                  }
+                                }
+                              ],
+                              "textCase": "UPPER",
+                              "letterSpacing": 0.5,
+                              "x": 112,
+                              "y": 15
+                            },
+                            {
+                              "name": "Type Header",
+                              "type": "TEXT",
+                              "characters": "TYPE",
+                              "fontSize": 10,
+                              "fontName": {
+                                "family": "Manrope",
+                                "style": "SemiBold"
+                              },
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": {
+                                    "r": 0.803,
+                                    "g": 0.835,
+                                    "b": 0.882,
+                                    "a": 1
+                                  }
+                                }
+                              ],
+                              "textCase": "UPPER",
+                              "letterSpacing": 0.5,
+                              "x": 252,
+                              "y": 15
+                            },
+                            {
+                              "name": "Amount Header",
+                              "type": "TEXT",
+                              "characters": "NET AMOUNT",
+                              "fontSize": 10,
+                              "fontName": {
+                                "family": "Manrope",
+                                "style": "SemiBold"
+                              },
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": {
+                                    "r": 0.803,
+                                    "g": 0.835,
+                                    "b": 0.882,
+                                    "a": 1
+                                  }
+                                }
+                              ],
+                              "textCase": "UPPER",
+                              "letterSpacing": 0.5,
+                              "x": 352,
+                              "y": 15
+                            },
+                            {
+                              "name": "VAT Header",
+                              "type": "TEXT",
+                              "characters": "VAT AMOUNT",
+                              "fontSize": 10,
+                              "fontName": {
+                                "family": "Manrope",
+                                "style": "SemiBold"
+                              },
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": {
+                                    "r": 0.803,
+                                    "g": 0.835,
+                                    "b": 0.882,
+                                    "a": 1
+                                  }
+                                }
+                              ],
+                              "textCase": "UPPER",
+                              "letterSpacing": 0.5,
+                              "x": 492,
+                              "y": 15
+                            },
+                            {
+                              "name": "Status Header",
+                              "type": "TEXT",
+                              "characters": "STATUS",
+                              "fontSize": 10,
+                              "fontName": {
+                                "family": "Manrope",
+                                "style": "SemiBold"
+                              },
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": {
+                                    "r": 0.803,
+                                    "g": 0.835,
+                                    "b": 0.882,
+                                    "a": 1
+                                  }
+                                }
+                              ],
+                              "textCase": "UPPER",
+                              "letterSpacing": 0.5,
+                              "x": 632,
+                              "y": 15
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Table Row 1",
+                      "type": "FRAME",
+                      "width": 784,
+                      "height": 48,
+                      "y": 44,
+                      "strokeWeight": 1,
+                      "strokes": [
+                        {
+                          "type": "SOLID",
+                          "color": {
+                            "r": 0.078,
+                            "g": 0.722,
+                            "b": 0.651,
+                            "a": 0.05
+                          }
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "Date",
+                          "type": "TEXT",
+                          "characters": "Jan 15, 2024",
+                          "fontSize": 12,
+                          "fontName": {
+                            "family": "Manrope",
+                            "style": "Regular"
+                          },
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 0.580,
+                                "g": 0.639,
+                                "b": 0.722,
+                                "a": 1
+                              }
+                            }
+                          ],
+                          "x": 12,
+                          "y": 16
+                        },
+                        {
+                          "name": "Transaction ID",
+                          "type": "TEXT",
+                          "characters": "TXN-2024-12345",
+                          "fontSize": 11,
+                          "fontName": {
+                            "family": "Manrope",
+                            "style": "Regular"
+                          },
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 0.580,
+                                "g": 0.639,
+                                "b": 0.722,
+                                "a": 1
+                              }
+                            }
+                          ],
+                          "x": 112,
+                          "y": 16
+                        },
+                        {
+                          "name": "Type Badge",
+                          "type": "FRAME",
+                          "width": 60,
+                          "height": 22,
+                          "x": 252,
+                          "y": 13,
+                          "backgroundColor": {
+                            "r": 0.078,
+                            "g": 0.882,
+                            "b": 0.588,
+                            "a": 0.15
+                          },
+                          "cornerRadius": 11,
+                          "children": [
+                            {
+                              "name": "Type",
+                              "type": "TEXT",
+                              "characters": "Sale",
+                              "fontSize": 10,
+                              "fontName": {
+                                "family": "Manrope",
+                                "style": "Medium"
+                              },
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": {
+                                    "r": 0.078,
+                                    "g": 0.882,
+                                    "b": 0.588,
+                                    "a": 1
+                                  }
+                                }
+                              ],
+                              "textAlignHorizontal": "CENTER",
+                              "x": 16,
+                              "y": 5
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Net Amount",
+                          "type": "TEXT",
+                          "characters": "€1,250.00",
+                          "fontSize": 12,
+                          "fontName": {
+                            "family": "Manrope",
+                            "style": "Medium"
+                          },
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 1,
+                                "g": 1,
+                                "b": 1,
+                                "a": 1
+                              }
+                            }
+                          ],
+                          "x": 352,
+                          "y": 16
+                        },
+                        {
+                          "name": "VAT Amount",
+                          "type": "TEXT",
+                          "characters": "€250.00",
+                          "fontSize": 12,
+                          "fontName": {
+                            "family": "Manrope",
+                            "style": "Bold"
+                          },
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 1,
+                                "g": 1,
+                                "b": 1,
+                                "a": 1
+                              }
+                            }
+                          ],
+                          "x": 492,
+                          "y": 16
+                        },
+                        {
+                          "name": "Status Badge",
+                          "type": "FRAME",
+                          "width": 80,
+                          "height": 22,
+                          "x": 632,
+                          "y": 13,
+                          "backgroundColor": {
+                            "r": 0.078,
+                            "g": 0.882,
+                            "b": 0.588,
+                            "a": 0.15
+                          },
+                          "cornerRadius": 11,
+                          "children": [
+                            {
+                              "name": "Status",
+                              "type": "TEXT",
+                              "characters": "Validated",
+                              "fontSize": 10,
+                              "fontName": {
+                                "family": "Manrope",
+                                "style": "Medium"
+                              },
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": {
+                                    "r": 0.078,
+                                    "g": 0.882,
+                                    "b": 0.588,
+                                    "a": 1
+                                  }
+                                }
+                              ],
+                              "textAlignHorizontal": "CENTER",
+                              "x": 16,
+                              "y": 5
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "More Rows Indicator",
+                      "type": "TEXT",
+                      "characters": "[Additional table rows...]",
+                      "fontSize": 12,
+                      "fontName": {
+                        "family": "Manrope",
+                        "style": "Italic"
+                      },
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": {
+                            "r": 0.580,
+                            "g": 0.639,
+                            "b": 0.722,
+                            "a": 0.5
+                          }
+                        }
+                      ],
+                      "x": 280,
+                      "y": 300
+                    }
+                  ]
+                },
+                {
+                  "name": "Table Footer",
+                  "type": "FRAME",
+                  "width": 784,
+                  "height": 48,
+                  "x": 24,
+                  "y": 748,
+                  "children": [
+                    {
+                      "name": "Info Text",
+                      "type": "TEXT",
+                      "characters": "Showing 1-20 of 1,247 transactions",
+                      "fontSize": 12,
+                      "fontName": {
+                        "family": "Manrope",
+                        "style": "Regular"
+                      },
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": {
+                            "r": 0.580,
+                            "g": 0.639,
+                            "b": 0.722,
+                            "a": 1
+                          }
+                        }
+                      ],
+                      "x": 0,
+                      "y": 16
+                    },
+                    {
+                      "name": "Pagination",
+                      "type": "FRAME",
+                      "width": 200,
+                      "height": 32,
+                      "x": 584,
+                      "y": 8,
+                      "layoutMode": "HORIZONTAL",
+                      "itemSpacing": 8,
+                      "children": [
+                        {
+                          "name": "Page 1 Active",
+                          "type": "FRAME",
+                          "width": 32,
+                          "height": 32,
+                          "fills": [
+                            {
+                              "type": "GRADIENT_LINEAR",
+                              "gradientStops": [
+                                {
+                                  "position": 0,
+                                  "color": {
+                                    "r": 0.078,
+                                    "g": 0.722,
+                                    "b": 0.651,
+                                    "a": 1
+                                  }
+                                },
+                                {
+                                  "position": 1,
+                                  "color": {
+                                    "r": 0.078,
+                                    "g": 0.882,
+                                    "b": 0.588,
+                                    "a": 1
+                                  }
+                                }
+                              ]
+                            }
+                          ],
+                          "cornerRadius": 8,
+                          "children": [
+                            {
+                              "name": "Page Number",
+                              "type": "TEXT",
+                              "characters": "1",
+                              "fontSize": 13,
+                              "fontName": {
+                                "family": "Manrope",
+                                "style": "Bold"
+                              },
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": {
+                                    "r": 1,
+                                    "g": 1,
+                                    "b": 1,
+                                    "a": 1
+                                  }
+                                }
+                              ],
+                              "textAlignHorizontal": "CENTER",
+                              "x": 12,
+                              "y": 8
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Page 2",
+                          "type": "FRAME",
+                          "width": 32,
+                          "height": 32,
+                          "backgroundColor": {
+                            "r": 0.125,
+                            "g": 0.145,
+                            "b": 0.224,
+                            "a": 0.4
+                          },
+                          "cornerRadius": 8,
+                          "children": [
+                            {
+                              "name": "Page Number",
+                              "type": "TEXT",
+                              "characters": "2",
+                              "fontSize": 13,
+                              "fontName": {
+                                "family": "Manrope",
+                                "style": "Medium"
+                              },
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": {
+                                    "r": 0.580,
+                                    "g": 0.639,
+                                    "b": 0.722,
+                                    "a": 1
+                                  }
+                                }
+                              ],
+                              "textAlignHorizontal": "CENTER",
+                              "x": 12,
+                              "y": 8
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Page 3",
+                          "type": "FRAME",
+                          "width": 32,
+                          "height": 32,
+                          "backgroundColor": {
+                            "r": 0.125,
+                            "g": 0.145,
+                            "b": 0.224,
+                            "a": 0.4
+                          },
+                          "cornerRadius": 8,
+                          "children": [
+                            {
+                              "name": "Page Number",
+                              "type": "TEXT",
+                              "characters": "3",
+                              "fontSize": 13,
+                              "fontName": {
+                                "family": "Manrope",
+                                "style": "Medium"
+                              },
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": {
+                                    "r": 0.580,
+                                    "g": 0.639,
+                                    "b": 0.722,
+                                    "a": 1
+                                  }
+                                }
+                              ],
+                              "textAlignHorizontal": "CENTER",
+                              "x": 12,
+                              "y": 8
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Dots",
+                          "type": "TEXT",
+                          "characters": "...",
+                          "fontSize": 13,
+                          "fontName": {
+                            "family": "Manrope",
+                            "style": "Regular"
+                          },
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 0.580,
+                                "g": 0.639,
+                                "b": 0.722,
+                                "a": 1
+                              }
+                            }
+                          ],
+                          "x": 120,
+                          "y": 8
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

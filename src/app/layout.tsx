@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from '@/components/theme/theme-provider';
+import { AppLayout } from '@/components/layout/navigation';
 import { Analytics } from '@vercel/analytics/react';
 import "./globals.css";
+import "@/styles/design-system.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "VATANA - VAT Number Analysis",
-  description: "Intelligent VAT compliance and error detection system",
+  title: "VATANA - VAT Analysis Engine",
+  description: "Intelligent VAT compliance and error detection system with advanced analytics",
 };
 
 export default function RootLayout({
@@ -28,7 +30,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#2563eb" />
+        <meta name="theme-color" content="#00D9B4" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="VATANA" />
@@ -43,7 +45,9 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem
         >
-          {children}
+          <AppLayout>
+            {children}
+          </AppLayout>
         </ThemeProvider>
         <Analytics />
       </body>

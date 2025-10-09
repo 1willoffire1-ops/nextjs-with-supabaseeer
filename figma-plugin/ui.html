@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(135deg, #0a0e1a 0%, #1a1f35 100%);
+      color: #e5e7eb;
+      padding: 20px;
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      font-size: 24px;
+      font-weight: 700;
+      background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 50%, #3b82f6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+    }
+    
+    .subtitle {
+      color: #94a3b8;
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+    
+    .section {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(20, 184, 166, 0.2);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    
+    .section-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #14b8a6;
+      margin-bottom: 12px;
+    }
+    
+    .page-option {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .page-option:hover {
+      background: rgba(20, 184, 166, 0.1);
+      border-color: #14b8a6;
+      transform: translateX(4px);
+    }
+    
+    .page-option input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: #14b8a6;
+    }
+    
+    .page-option-content {
+      flex: 1;
+    }
+    
+    .page-option-title {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+    
+    .page-option-desc {
+      font-size: 12px;
+      color: #94a3b8;
+    }
+    
+    .button {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      box-shadow: 0 4px 12px rgba(20, 184, 166, 0.3);
+    }
+    
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(20, 184, 166, 0.5);
+    }
+    
+    .button:active {
+      transform: translateY(0);
+    }
+    
+    .button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    
+    .checkbox-group {
+      margin-bottom: 16px;
+    }
+    
+    .option-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+    
+    .option-label input {
+      accent-color: #14b8a6;
+    }
+    
+    #status {
+      margin-top: 12px;
+      padding: 12px;
+      background: rgba(20, 184, 166, 0.1);
+      border: 1px solid rgba(20, 184, 166, 0.3);
+      border-radius: 8px;
+      font-size: 13px;
+      text-align: center;
+      display: none;
+    }
+    
+    #status.show {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎨 VATANA Design System</h1>
+    <p class="subtitle">Generate beautiful pages with turquoise theme</p>
+    
+    <div class="section">
+      <div class="section-title">Select Pages to Generate</div>
+      
+      <label class="page-option">
+        <input type="checkbox" id="landing" checked>
+        <div class="page-option-content">
+          <div class="page-option-title">🏠 Landing Page</div>
+          <div class="page-option-desc">Hero, features, stats, CTA sections</div>
+        </div>
+      </label>
+      
+      <label class="page-option">
+        <input type="checkbox" id="dashboard" checked>
+        <div class="page-option-content">
+          <div class="page-option-title">📊 Dashboard</div>
+          <div class="page-option-desc">Analytics, charts, KPI cards</div>
+        </div>
+      </label>
+      
+      <label class="page-option">
+        <input type="checkbox" id="settings" checked>
+        <div class="page-option-content">
+          <div class="page-option-title">⚙️ Settings</div>
+          <div class="page-option-desc">Profile, notifications, preferences</div>
+        </div>
+      </label>
+      
+      <label class="page-option">
+        <input type="checkbox" id="team">
+        <div class="page-option-content">
+          <div class="page-option-title">👥 Team Management</div>
+          <div class="page-option-desc">Team list, roles, invitations</div>
+        </div>
+      </label>
+      
+      <label class="page-option">
+        <input type="checkbox" id="components">
+        <div class="page-option-content">
+          <div class="page-option-title">🧩 Component Library</div>
+          <div class="page-option-desc">Buttons, cards, forms, inputs</div>
+        </div>
+      </label>
+    </div>
+    
+    <div class="section">
+      <div class="section-title">Options</div>
+      
+      <label class="option-label">
+        <input type="checkbox" id="withContent" checked>
+        <span>Include sample content</span>
+      </label>
+      
+      <label class="option-label">
+        <input type="checkbox" id="withAnnotations">
+        <span>Add design annotations</span>
+      </label>
+    </div>
+    
+    <button class="button" id="generate">Generate Selected Pages</button>
+    
+    <div id="status"></div>
+  </div>
+
+  <script>
+    const generateBtn = document.getElementById('generate');
+    const statusDiv = document.getElementById('status');
+    
+    function showStatus(message) {
+      statusDiv.textContent = message;
+      statusDiv.classList.add('show');
+      setTimeout(() => {
+        statusDiv.classList.remove('show');
+      }, 3000);
+    }
+    
+    generateBtn.onclick = () => {
+      const selectedPages = [];
+      
+      if (document.getElementById('landing').checked) selectedPages.push('landing');
+      if (document.getElementById('dashboard').checked) selectedPages.push('dashboard');
+      if (document.getElementById('settings').checked) selectedPages.push('settings');
+      if (document.getElementById('team').checked) selectedPages.push('team');
+      if (document.getElementById('components').checked) selectedPages.push('components');
+      
+      if (selectedPages.length === 0) {
+        showStatus('⚠️ Please select at least one page');
+        return;
+      }
+      
+      const options = {
+        withContent: document.getElementById('withContent').checked,
+        withAnnotations: document.getElementById('withAnnotations').checked
+      };
+      
+      generateBtn.disabled = true;
+      generateBtn.textContent = '⏳ Generating...';
+      showStatus(`🎨 Creating ${selectedPages.length} page(s)...`);
+      
+      parent.postMessage({ 
+        pluginMessage: { 
+          type: 'generate',
+          pages: selectedPages,
+          options: options
+        } 
+      }, '*');
+    };
+    
+    window.onmessage = (event) => {
+      const msg = event.data.pluginMessage;
+      
+      if (msg.type === 'complete') {
+        showStatus(`✅ Successfully created ${msg.count} page(s)!`);
+        generateBtn.disabled = false;
+        generateBtn.textContent = 'Generate Selected Pages';
+      } else if (msg.type === 'error') {
+        showStatus(`❌ Error: ${msg.message}`);
+        generateBtn.disabled = false;
+        generateBtn.textContent = 'Generate Selected Pages';
+      }
+    };
+  </script>
+</body>
+</html>

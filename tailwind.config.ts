@@ -13,62 +13,60 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Light mode colors
+        // VATANA Turquoise Theme - Background Colors
         background: {
-          DEFAULT: '#ffffff',
-          secondary: '#f9fafb',
-          tertiary: '#f3f4f6',
+          DEFAULT: '#0A0E1A',      // Deep navy black
+          secondary: '#0F1419',     // Slightly lighter
+          tertiary: '#1A1F2E',      // Card background
+          elevated: '#212838',      // Elevated surfaces
         },
         foreground: {
-          DEFAULT: '#1f2937',
-          secondary: '#6b7280',
-          tertiary: '#9ca3af',
+          DEFAULT: '#F8FAFC',       // Pure white text
+          secondary: '#CBD5E1',     // Gray text
+          tertiary: '#94A3B8',      // Muted gray
         },
         
-        // Dark mode colors (will be applied with dark: prefix)
-        dark: {
-          background: {
-            DEFAULT: '#0f172a',
-            secondary: '#1e293b',
-            tertiary: '#334155',
-          },
-          foreground: {
-            DEFAULT: '#f1f5f9',
-            secondary: '#cbd5e1',
-            tertiary: '#94a3b8',
-          },
-        },
-        
-        // Brand colors (work in both modes)
+        // Turquoise/Green Accent Colors
         primary: {
-          50: '#eff6ff',
-          100: '#dbeafe',
-          200: '#bfdbfe',
-          300: '#93c5fd',
-          400: '#60a5fa',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8',
-          800: '#1e40af',
-          900: '#1e3a8a',
+          DEFAULT: '#00D9B4',       // Bright turquoise
+          50: '#E5FFF9',
+          100: '#CCFFF4',
+          200: '#99FFE8',
+          300: '#66FFDD',
+          400: '#33FFD1',
+          500: '#00D9B4',
+          600: '#00BFA6',
+          700: '#009981',
+          800: '#00735C',
+          900: '#004D37',
+        },
+        accent: {
+          DEFAULT: '#00D9B4',       // Bright turquoise
+          secondary: '#00BFA6',     // Deeper turquoise
+          tertiary: '#14F195',      // Mint green
+          glow: '#00FFD1',          // Bright cyan glow
         },
         
-        // Status colors optimized for both modes
+        // Status colors
         success: {
-          light: '#10b981',
-          dark: '#34d399',
+          DEFAULT: '#14F195',       // Mint green
+          light: '#34F1A5',
+          dark: '#00BFA6',
         },
         warning: {
-          light: '#f59e0b',
-          dark: '#fbbf24',
+          DEFAULT: '#FFB800',       // Warm yellow
+          light: '#FFC933',
+          dark: '#E6A600',
         },
         error: {
-          light: '#ef4444',
-          dark: '#f87171',
+          DEFAULT: '#FF4757',       // Coral red
+          light: '#FF6B7A',
+          dark: '#E62E3E',
         },
         info: {
-          light: '#3b82f6',
-          dark: '#60a5fa',
+          DEFAULT: '#00D9B4',       // Turquoise
+          light: '#00FFD1',
+          dark: '#00BFA6',
         },
       },
       
@@ -81,10 +79,48 @@ const config: Config = {
         'dark-2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
       },
       
-      // Background patterns for dark mode
+      // Background patterns
       backgroundImage: {
         'gradient-dark': 'linear-gradient(to bottom right, #1e293b, #0f172a)',
         'gradient-light': 'linear-gradient(to bottom right, #f8fafc, #ffffff)',
+        'gradient-turquoise': 'linear-gradient(135deg, #00D9B4 0%, #14F195 100%)',
+        'gradient-mesh': 'radial-gradient(circle at 20% 50%, rgba(0, 217, 180, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(20, 241, 149, 0.15) 0%, transparent 50%)',
+      },
+      
+      // Animations
+      animation: {
+        'gradient-shift': 'gradient-shift 15s ease infinite',
+        'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+        'shimmer': 'shimmer 2s infinite',
+        'fade-in-up': 'fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
+      },
+      keyframes: {
+        'gradient-shift': {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+        },
+        'pulse-glow': {
+          '0%, 100%': { boxShadow: '0 0 20px rgba(0, 217, 180, 0.4)' },
+          '50%': { boxShadow: '0 0 40px rgba(0, 217, 180, 0.6)' },
+        },
+        'shimmer': {
+          '100%': { left: '100%' },
+        },
+        'fadeInUp': {
+          'from': {
+            opacity: '0',
+            transform: 'translateY(20px)',
+          },
+          'to': {
+            opacity: '1',
+            transform: 'translateY(0)',
+          },
+        },
+      },
+      
+      // Backdrop blur
+      backdropBlur: {
+        xs: '2px',
       },
     },
   },

@@ -1,0 +1,948 @@
+{
+  "page_type": "dashboard",
+  "page_name": "VATANA Dashboard",
+  "version": "1.0.0",
+  "framework": "react",
+  "styling": "tailwind",
+  "description": "Comprehensive, data-rich dashboard providing users with an at-a-glance overview of VAT compliance status, recent activities, and key metrics",
+  
+  "design_system": {
+    "theme": "dark",
+    "effects": ["glassmorphism", "gradients", "blur"],
+    "typography": {
+      "primary": "Manrope",
+      "fallback": ["Inter", "Roboto", "system-ui"]
+    },
+    "colors": {
+      "primary": "#00D9B4",
+      "secondary": "#14F195",
+      "background": {
+        "primary": "#0A0E1A",
+        "secondary": "#0F1419",
+        "card": "#1A1F2E",
+        "sidebar": "rgba(15, 20, 25, 0.95)"
+      },
+      "text": {
+        "primary": "#FFFFFF",
+        "secondary": "#D1D5DB",
+        "muted": "#9CA3AF",
+        "gray": "#94A3B8"
+      },
+      "status": {
+        "success": "#10B981",
+        "warning": "#FFB800",
+        "error": "#FF4757",
+        "info": "#00D9B4"
+      },
+      "chart": {
+        "gradient_start": "#00D9B4",
+        "gradient_end": "#14F195",
+        "goods": "#00D9B4",
+        "services": "#14F195",
+        "digital": "#00BFA6",
+        "import": "#00FFD1",
+        "other": "#94A3B8"
+      }
+    },
+    "spacing": {
+      "sidebar_width": "240px",
+      "main_padding": "32px",
+      "card_padding": "24px",
+      "item_gap": "24px"
+    }
+  },
+  
+  "layout": {
+    "type": "sidebar_main",
+    "structure": {
+      "sidebar": {
+        "width": "240px",
+        "position": "fixed",
+        "height": "100vh"
+      },
+      "main": {
+        "margin_left": "240px",
+        "width": "calc(100% - 240px)",
+        "scrollable": true
+      }
+    },
+    "background": "#0A0E1A",
+    "padding": "p-8"
+  },
+  
+  "sections": [
+    {
+      "id": "sidebar",
+      "name": "Sidebar Navigation",
+      "type": "fixed_sidebar",
+      "dimensions": {
+        "width": "240px",
+        "height": "100vh"
+      },
+      "position": "fixed",
+      "z_index": 40,
+      "background": {
+        "color": "rgba(15, 20, 25, 0.95)",
+        "backdrop_filter": "blur(20px)",
+        "border_right": "1px solid rgba(0, 217, 180, 0.1)"
+      },
+      
+      "header": {
+        "padding": "p-6",
+        "logo": {
+          "text": "VATANA",
+          "style": "text-2xl font-bold",
+          "gradient": ["#00D9B4", "#14F195"]
+        },
+        "workspace": {
+          "text": "Company Workspace",
+          "style": "text-sm text-gray-400 mt-1"
+        },
+        "divider": {
+          "style": "border-b border-gray-800 mt-4"
+        }
+      },
+      
+      "menu_items": [
+        {
+          "id": "dashboard",
+          "text": "Dashboard",
+          "icon": "LayoutDashboard",
+          "href": "/dashboard",
+          "active": true
+        },
+        {
+          "id": "vat_filing",
+          "text": "VAT Filing & Compliance",
+          "icon": "FileText",
+          "href": "/vat-filing",
+          "badge": {
+            "type": "dot",
+            "color": "#FF4757",
+            "count": 3,
+            "text": "3 Pending"
+          }
+        },
+        {
+          "id": "reports",
+          "text": "Reports & Analytics",
+          "icon": "BarChart3",
+          "href": "/reports"
+        },
+        {
+          "id": "upload",
+          "text": "Upload",
+          "icon": "Upload",
+          "href": "/upload"
+        },
+        {
+          "id": "validation",
+          "text": "Validation",
+          "icon": "CheckCircle",
+          "href": "/validation",
+          "badge": {
+            "type": "text",
+            "text": "New",
+            "color": "#00D9B4"
+          }
+        },
+        {
+          "id": "settings",
+          "text": "Settings",
+          "icon": "Settings",
+          "href": "/settings"
+        },
+        {
+          "type": "divider",
+          "style": "border-b border-gray-800 my-2 opacity-50"
+        },
+        {
+          "id": "support",
+          "text": "Support",
+          "icon": "HelpCircle",
+          "href": "/support"
+        },
+        {
+          "id": "logout",
+          "text": "Logout",
+          "icon": "LogOut",
+          "href": "/logout"
+        }
+      ],
+      
+      "menu_item_styling": {
+        "default": {
+          "padding": "12px 16px",
+          "border_radius": "8px",
+          "color": "#94A3B8",
+          "display": "flex",
+          "align_items": "center",
+          "gap": "12px",
+          "transition": "all 0.2s ease",
+          "cursor": "pointer"
+        },
+        "hover": {
+          "background": "rgba(0, 217, 180, 0.05)",
+          "color": "#00D9B4",
+          "transform": "translateX(4px)"
+        },
+        "active": {
+          "background": "rgba(0, 217, 180, 0.1)",
+          "color": "#00D9B4",
+          "border_left": "3px solid #00D9B4",
+          "font_weight": 600
+        }
+      },
+      
+      "footer": {
+        "type": "user_profile",
+        "content": {
+          "avatar": {
+            "size": "40px",
+            "gradient_border": true
+          },
+          "name": "John Doe",
+          "email": "john@company.com",
+          "dropdown_icon": "ChevronDown"
+        },
+        "styling": {
+          "background": "glass",
+          "padding": "p-3",
+          "margin": "m-4",
+          "border_radius": "rounded-lg",
+          "border": "1px solid rgba(0, 217, 180, 0.15)",
+          "hover": "glow"
+        }
+      }
+    },
+    
+    {
+      "id": "top_bar",
+      "name": "Top Bar",
+      "type": "sticky_header",
+      "dimensions": {
+        "height": "72px",
+        "width": "100%"
+      },
+      "position": "sticky",
+      "background": {
+        "color": "rgba(26, 31, 46, 0.8)",
+        "backdrop_filter": "blur(20px)",
+        "border_bottom": "1px solid rgba(0, 217, 180, 0.1)"
+      },
+      "padding": "16px 32px",
+      
+      "content": {
+        "left": {
+          "title": {
+            "text": "Dashboard",
+            "style": "text-3xl font-bold text-white"
+          },
+          "breadcrumb": {
+            "text": "Home / Dashboard",
+            "style": "text-sm text-gray-400"
+          }
+        },
+        "right": {
+          "layout": "flex gap-4",
+          "elements": [
+            {
+              "type": "search",
+              "icon": "Search",
+              "placeholder": "Search transactions, reports...",
+              "width": "300px",
+              "style": "glass_input rounded-lg"
+            },
+            {
+              "type": "notification_bell",
+              "icon": "Bell",
+              "badge": {
+                "count": 3,
+                "color": "#FF4757"
+              },
+              "size": "40x40px",
+              "style": "glass_button"
+            },
+            {
+              "type": "avatar",
+              "size": "40x40px",
+              "gradient_border": true,
+              "dropdown": true
+            }
+          ]
+        }
+      }
+    },
+    
+    {
+      "id": "kpi_metrics",
+      "name": "Key Metrics (KPI Cards)",
+      "type": "grid",
+      "margin": "mb-8",
+      "grid": {
+        "columns": {
+          "mobile": 1,
+          "tablet": 2,
+          "desktop": 4
+        },
+        "gap": "gap-6"
+      },
+      
+      "cards": [
+        {
+          "id": "total_vat_collected",
+          "icon": "DollarSign",
+          "icon_position": "top-right",
+          "icon_style": "gradient_circle",
+          "label": "Total VAT Collected",
+          "value": "€1,245,890",
+          "value_style": "text-3xl font-bold gradient-text",
+          "change": {
+            "value": "+12.5%",
+            "period": "vs last month",
+            "direction": "up",
+            "color": "green",
+            "icon": "TrendingUp"
+          },
+          "background_effect": {
+            "type": "radial_gradient",
+            "position": "100% 0%",
+            "color": "rgba(0, 217, 180, 0.1)",
+            "spread": "50%"
+          }
+        },
+        {
+          "id": "vat_payable",
+          "icon": "Receipt",
+          "label": "VAT Payable",
+          "value": "€89,450",
+          "value_style": "text-3xl font-bold gradient-text",
+          "change": {
+            "value": "-5.2%",
+            "period": "vs last month",
+            "direction": "down",
+            "color": "red",
+            "icon": "TrendingDown"
+          },
+          "badge": {
+            "text": "Due in 12 days",
+            "style": "glass",
+            "color": "warning"
+          },
+          "progress_bar": {
+            "position": "bottom",
+            "value": 12,
+            "max": 30,
+            "gradient": ["#00D9B4", "#FFB800"],
+            "label": "Days until due"
+          }
+        },
+        {
+          "id": "pending_validations",
+          "icon": "AlertCircle",
+          "label": "Pending Validations",
+          "value": "47",
+          "value_style": "text-3xl font-bold gradient-text",
+          "subtext": "3 require attention",
+          "action_link": {
+            "text": "Review →",
+            "color": "#00D9B4"
+          },
+          "indicator": {
+            "type": "pulsing_dot",
+            "color": "warning",
+            "condition": "has_urgent_items"
+          }
+        },
+        {
+          "id": "compliance_score",
+          "icon": "Shield",
+          "label": "Compliance Score",
+          "value": "98%",
+          "value_style": "text-3xl font-bold gradient-text",
+          "chart": {
+            "type": "circular_progress",
+            "value": 98,
+            "stroke": "gradient",
+            "gradient": ["#00D9B4", "#14F195"],
+            "stroke_width": 8,
+            "remaining_color": "#1A1F2E"
+          },
+          "status": {
+            "text": "Excellent",
+            "badge_color": "green"
+          }
+        }
+      ],
+      
+      "card_styling": {
+        "background": "rgba(26, 31, 46, 0.8)",
+        "backdrop_filter": "blur(20px)",
+        "border": "1px solid rgba(0, 217, 180, 0.15)",
+        "border_radius": "16px",
+        "padding": "24px",
+        "position": "relative",
+        "overflow": "hidden",
+        "hover": {
+          "transform": "translateY(-2px)",
+          "shadow": "0 8px 32px rgba(0, 217, 180, 0.15)"
+        }
+      }
+    },
+    
+    {
+      "id": "charts_row",
+      "name": "Charts Row",
+      "type": "grid",
+      "margin": "mb-8",
+      "grid": {
+        "columns": {
+          "mobile": 1,
+          "desktop": 2
+        },
+        "gap": "gap-6",
+        "column_widths": {
+          "desktop": ["60%", "40%"]
+        }
+      },
+      
+      "charts": [
+        {
+          "id": "vat_trend",
+          "type": "line_chart",
+          "title": "VAT Collection Trend",
+          "dropdown": {
+            "options": ["Last 6 months", "Last year", "All time"],
+            "default": "Last 6 months"
+          },
+          "link": {
+            "text": "View details",
+            "position": "top-right"
+          },
+          "dimensions": {
+            "min_height": "400px"
+          },
+          "chart_config": {
+            "library": "recharts",
+            "data_key": "vat",
+            "x_axis": "month",
+            "line": {
+              "type": "monotone",
+              "stroke": "url(#gradient)",
+              "stroke_width": 3,
+              "dot": {
+                "fill": "#00D9B4",
+                "radius": 4
+              }
+            },
+            "grid": {
+              "stroke_dasharray": "3 3",
+              "stroke": "rgba(0, 217, 180, 0.1)"
+            },
+            "axes": {
+              "stroke": "#94A3B8"
+            },
+            "tooltip": {
+              "background": "rgba(26, 31, 46, 0.95)",
+              "border": "1px solid rgba(0, 217, 180, 0.3)",
+              "border_radius": "8px"
+            },
+            "gradient": {
+              "id": "gradient",
+              "stops": [
+                { "offset": "0%", "color": "#00D9B4" },
+                { "offset": "100%", "color": "#14F195" }
+              ]
+            }
+          },
+          "sample_data": [
+            { "month": "Aug", "vat": 180000 },
+            { "month": "Sep", "vat": 195000 },
+            { "month": "Oct", "vat": 210000 },
+            { "month": "Nov", "vat": 225000 },
+            { "month": "Dec", "vat": 245000 },
+            { "month": "Jan", "vat": 260000 }
+          ]
+        },
+        {
+          "id": "vat_by_category",
+          "type": "donut_chart",
+          "title": "VAT by Category",
+          "dropdown": {
+            "options": ["This month", "Last month", "This quarter"],
+            "default": "This month"
+          },
+          "chart_config": {
+            "library": "recharts",
+            "inner_radius": 60,
+            "outer_radius": 90,
+            "padding_angle": 5,
+            "center": ["50%", "50%"]
+          },
+          "categories": [
+            { "name": "Goods", "value": 45, "color": "#00D9B4" },
+            { "name": "Services", "value": 30, "color": "#14F195" },
+            { "name": "Digital", "value": 15, "color": "#00BFA6" },
+            { "name": "Import", "value": 7, "color": "#00FFD1" },
+            { "name": "Other", "value": 3, "color": "#94A3B8" }
+          ],
+          "legend": {
+            "position": "below",
+            "layout": "vertical",
+            "item_style": "flex items-center gap-2 text-sm text-gray-400"
+          }
+        }
+      ],
+      
+      "card_styling": {
+        "background": "rgba(26, 31, 46, 0.8)",
+        "backdrop_filter": "blur(20px)",
+        "border": "1px solid rgba(0, 217, 180, 0.15)",
+        "border_radius": "16px",
+        "padding": "24px"
+      }
+    },
+    
+    {
+      "id": "recent_activity",
+      "name": "Recent Activity",
+      "type": "activity_list",
+      "margin": "mb-8",
+      "layout": "full_width",
+      
+      "header": {
+        "left": {
+          "title": "Recent Activity",
+          "style": "text-xl font-semibold"
+        },
+        "right": {
+          "link": "View All",
+          "color": "#00D9B4"
+        }
+      },
+      
+      "container": {
+        "style": "glass_card",
+        "padding": "24px"
+      },
+      
+      "activities": [
+        {
+          "icon": "FileCheck",
+          "icon_background": "green",
+          "title": "VAT Return Submitted",
+          "description": "Q4 2024 VAT return submitted to HMRC",
+          "details": "Reference: VRT-2024-Q4-001",
+          "time": "2 hours ago",
+          "status": {
+            "text": "Success",
+            "color": "green"
+          }
+        },
+        {
+          "icon": "Upload",
+          "icon_background": "blue",
+          "title": "New Transaction Uploaded",
+          "description": "125 new transactions imported from QuickBooks",
+          "details": "From: January 1-15, 2025",
+          "time": "5 hours ago",
+          "status": {
+            "text": "Completed",
+            "color": "green"
+          }
+        },
+        {
+          "icon": "AlertCircle",
+          "icon_background": "yellow",
+          "title": "Validation Required",
+          "description": "3 VAT numbers require manual validation",
+          "details": "Germany (DE), France (FR)",
+          "time": "1 day ago",
+          "status": {
+            "text": "Pending",
+            "color": "yellow"
+          }
+        },
+        {
+          "icon": "FileText",
+          "icon_background": "turquoise",
+          "title": "Report Generated",
+          "description": "Monthly VAT report generated",
+          "details": "December 2024 Summary",
+          "time": "2 days ago",
+          "action": {
+            "text": "Download",
+            "type": "button"
+          }
+        },
+        {
+          "icon": "CreditCard",
+          "icon_background": "green",
+          "title": "Payment Processed",
+          "description": "VAT payment of €45,280 processed",
+          "details": "Payment ID: PAY-2024-123",
+          "time": "3 days ago",
+          "status": {
+            "text": "Completed",
+            "color": "green"
+          }
+        }
+      ],
+      
+      "activity_item_styling": {
+        "padding": "16px",
+        "border_bottom": "1px solid rgba(0, 217, 180, 0.05)",
+        "display": "flex",
+        "align_items": "center",
+        "gap": "16px",
+        "transition": "background 0.2s ease",
+        "hover": {
+          "background": "rgba(0, 217, 180, 0.03)"
+        },
+        "icon_container": {
+          "size": "40x40px",
+          "border_radius": "rounded-lg",
+          "background": "rgba(color, 0.1)"
+        },
+        "time": {
+          "style": "text-xs text-gray-500",
+          "position": "top-right"
+        },
+        "status_badge": {
+          "style": "small rounded badge",
+          "background": "rgba(color, 0.1)",
+          "border": "1px solid rgba(color, 0.3)",
+          "text": "text-xs font-medium"
+        }
+      }
+    },
+    
+    {
+      "id": "quick_actions",
+      "name": "Quick Actions",
+      "type": "grid",
+      "margin": "mb-8",
+      "grid": {
+        "columns": {
+          "mobile": 1,
+          "desktop": 3
+        },
+        "gap": "gap-6"
+      },
+      
+      "actions": [
+        {
+          "id": "upload_transactions",
+          "icon": "Upload",
+          "icon_size": "large",
+          "icon_style": "gradient_circle",
+          "title": "Upload Transactions",
+          "description": "Import invoices and receipts",
+          "button": {
+            "text": "Upload Files",
+            "variant": "glass"
+          }
+        },
+        {
+          "id": "file_vat_return",
+          "icon": "Send",
+          "icon_size": "large",
+          "icon_style": "gradient_circle",
+          "title": "File VAT Return",
+          "description": "Submit your quarterly return",
+          "button": {
+            "text": "Start Filing",
+            "variant": "primary_gradient"
+          },
+          "special_state": {
+            "condition": "ready_to_file",
+            "border": "pulsing_glow",
+            "badge": {
+              "text": "Ready",
+              "position": "top-right"
+            }
+          }
+        },
+        {
+          "id": "generate_report",
+          "icon": "FileText",
+          "icon_size": "large",
+          "icon_style": "gradient_circle",
+          "title": "Generate Report",
+          "description": "Create custom VAT reports",
+          "button": {
+            "text": "Create Report",
+            "variant": "glass"
+          }
+        }
+      ],
+      
+      "card_styling": {
+        "style": "glass",
+        "padding": "p-8",
+        "text_align": "center",
+        "hover": {
+          "transform": "lift"
+        }
+      }
+    },
+    
+    {
+      "id": "upcoming_deadlines",
+      "name": "Upcoming Deadlines",
+      "type": "timeline_list",
+      "margin": "mb-8",
+      "layout": "full_width",
+      
+      "header": {
+        "title": "Upcoming Deadlines",
+        "icon": "Calendar",
+        "filter": {
+          "text": "Next 30 days",
+          "type": "dropdown"
+        }
+      },
+      
+      "container": {
+        "style": "glass_card",
+        "padding": "24px"
+      },
+      
+      "deadlines": [
+        {
+          "date": {
+            "month": "JAN",
+            "day": "31",
+            "year": "2025"
+          },
+          "title": "Q4 2024 VAT Return Filing",
+          "country": "United Kingdom",
+          "priority": {
+            "level": "High",
+            "color": "#FF4757",
+            "badge_style": "pulsing_dot"
+          },
+          "days_remaining": "12 days",
+          "action": {
+            "text": "Prepare",
+            "variant": "glass_small"
+          }
+        },
+        {
+          "date": {
+            "month": "FEB",
+            "day": "15",
+            "year": "2025"
+          },
+          "title": "VAT Payment Due",
+          "amount": "€89,450",
+          "priority": {
+            "level": "High",
+            "color": "#FFB800",
+            "badge_style": "yellow"
+          },
+          "days_remaining": "27 days",
+          "action": {
+            "text": "Schedule Payment",
+            "variant": "glass_small"
+          }
+        },
+        {
+          "date": {
+            "month": "FEB",
+            "day": "28",
+            "year": "2025"
+          },
+          "title": "EC Sales List Submission",
+          "country": "Multiple EU States",
+          "priority": {
+            "level": "Medium",
+            "color": "#00D9B4",
+            "badge_style": "turquoise"
+          },
+          "days_remaining": "40 days",
+          "action": {
+            "text": "Review",
+            "variant": "glass_small"
+          }
+        },
+        {
+          "date": {
+            "month": "MAR",
+            "day": "10",
+            "year": "2025"
+          },
+          "title": "Intrastat Declaration",
+          "priority": {
+            "level": "Low",
+            "color": "#94A3B8",
+            "badge_style": "gray"
+          },
+          "action": {
+            "text": "View Details",
+            "variant": "glass_small"
+          }
+        }
+      ],
+      
+      "deadline_item_styling": {
+        "display": "flex",
+        "align_items": "center",
+        "padding": "20px",
+        "border_left": "4px solid (priority-color)",
+        "background": "rgba(26, 31, 46, 0.4)",
+        "border_radius": "8px",
+        "margin_bottom": "12px",
+        "date_badge": {
+          "type": "glass_container",
+          "position": "left",
+          "min_width": "60px",
+          "text_align": "center",
+          "format": "MMM DD"
+        }
+      }
+    }
+  ],
+  
+  "responsive": {
+    "breakpoints": {
+      "mobile": "< 768px",
+      "tablet": "768px - 1024px",
+      "desktop": "> 1024px"
+    },
+    "desktop": {
+      "sidebar": "visible_fixed",
+      "grids": "multi_column",
+      "charts": "side_by_side"
+    },
+    "tablet": {
+      "sidebar": "icons_only_or_hamburger",
+      "grids": "2_columns",
+      "charts": "stacked",
+      "padding": "reduced"
+    },
+    "mobile": {
+      "sidebar": "hamburger_menu",
+      "layout": "single_column",
+      "text_sizes": "smaller",
+      "buttons": "touch_friendly_min_44px",
+      "bottom_nav": "optional"
+    }
+  },
+  
+  "interactive_states": {
+    "loading": {
+      "skeleton_screens": true,
+      "shimmer_effect": true,
+      "spinner_for_charts": true
+    },
+    "empty": {
+      "illustration": true,
+      "message": "No data available",
+      "action": "Upload your first transaction"
+    },
+    "error": {
+      "border": "red",
+      "icon": true,
+      "message": "with_retry_button"
+    },
+    "hover": {
+      "cards": ["lift", "subtle_glow"],
+      "buttons": ["brightness_increase", "scale"],
+      "links": "color_change_to_bright_turquoise"
+    }
+  },
+  
+  "animations": {
+    "number_counter": {
+      "target": "kpi_values",
+      "trigger": "on_load",
+      "duration": "1-2s",
+      "easing": "ease-out"
+    },
+    "chart_entrance": {
+      "fade_in": true,
+      "scale": "slight",
+      "line_draw": "left_to_right",
+      "delay": "200ms_after_card"
+    },
+    "activity_items": {
+      "fade_in": "sequential",
+      "stagger": "100ms",
+      "slide_in": "from_left_slightly"
+    },
+    "status_badges": {
+      "pending": "pulse_animation",
+      "urgent": "gentle_glow"
+    },
+    "notification_bell": {
+      "new_notification": "shake",
+      "badge_scale": "brief_scale_up"
+    }
+  },
+  
+  "accessibility": {
+    "focus_states": "all_interactive_elements",
+    "color_indicators": "not_only_use_icons_and_text",
+    "aria_labels": "all_icons",
+    "keyboard_navigation": true,
+    "screen_reader": "friendly",
+    "color_contrast": "WCAG_AA_minimum"
+  },
+  
+  "data_visualization": {
+    "best_practices": {
+      "color_palette": "consistent",
+      "axis_labels": "clear",
+      "tooltips": "on_hover",
+      "legends": "all_charts",
+      "responsive_sizing": true,
+      "loading_states": "async_data",
+      "empty_state_handling": true
+    }
+  },
+  
+  "sample_data_structure": {
+    "kpis": {
+      "totalVAT": 1245890,
+      "vatPayable": 89450,
+      "pendingValidations": 47,
+      "complianceScore": 98
+    },
+    "vatTrend": [
+      { "month": "Aug", "vat": 180000 },
+      { "month": "Sep", "vat": 195000 },
+      { "month": "Oct", "vat": 210000 },
+      { "month": "Nov", "vat": 225000 },
+      { "month": "Dec", "vat": 245000 },
+      { "month": "Jan", "vat": 260000 }
+    ],
+    "categoryData": [
+      { "name": "Goods", "value": 45, "color": "#00D9B4" },
+      { "name": "Services", "value": 30, "color": "#14F195" },
+      { "name": "Digital", "value": 15, "color": "#00BFA6" },
+      { "name": "Import", "value": 7, "color": "#00FFD1" },
+      { "name": "Other", "value": 3, "color": "#94A3B8" }
+    ]
+  },
+  
+  "figma_generation": {
+    "canvas_size": {
+      "width": 1440,
+      "height": "auto"
+    },
+    "components_needed": [
+      "fixed_sidebar_with_menu",
+      "sticky_top_bar",
+      "kpi_card_grid",
+      "line_chart_card",
+      "donut_chart_card",
+      "activity_list_card",
+      "quick_action_cards",
+      "deadline_timeline_card",
+      "circular_progress_indicator",
+      "status_badges",
+      "notification_bell_with_badge"
+    ]
+  }
+}
