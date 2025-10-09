@@ -66,7 +66,7 @@ const Status = () => {
   useEffect(() => {
     const fetchHealthData = async () => {
       try {
-        const baseUrl = import.meta.env.VITE_APP_URL || window.location.origin;
+        const baseUrl = window.location.origin;
         const response = await fetch(`${baseUrl}/api/health`);
         
         if (response.ok) {
