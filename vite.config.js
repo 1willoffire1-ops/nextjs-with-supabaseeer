@@ -26,7 +26,6 @@ export default defineConfig(({ mode }) => ({
     sourcemap: true,
   },
   define: {
-    // Replace process.env with import.meta.env for Vite
     global: 'globalThis',
   },
   optimizeDeps: {
