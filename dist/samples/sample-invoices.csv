@@ -1,0 +1,21 @@
+invoice_id,date,customer_name,customer_country,customer_vat,net_amount,vat_rate,vat_amount,gross_amount,product_type,description
+INV-2024-001,2024-01-15,Acme Corporation Ltd,IE,IE1234567X,1000.00,0.23,230.00,1230.00,Services,Web Development Services
+INV-2024-002,2024-01-16,Tech Solutions UK,GB,GB987654321,2500.00,0.23,575.00,3075.00,Goods,Computer Hardware
+INV-2024-003,2024-01-17,Dublin Restaurant,IE,IE9876543Z,500.00,0.135,67.50,567.50,Services,Catering Services
+INV-2024-004,2024-01-18,Paris Consulting SARL,FR,FR123456789,3000.00,0.00,0.00,3000.00,Services,Consulting (Reverse Charge)
+INV-2024-005,2024-01-19,Berlin GmbH,DE,DE555666777,1500.00,0.23,345.00,1845.00,Goods,Software Licenses
+INV-2024-006,2024-01-20,Cork Ltd,IE,IE2468135A,800.00,0.23,184.00,984.00,Services,Marketing Services
+INV-2024-007,2024-01-21,Galway Retail,IE,IE1357924B,450.00,0.09,40.50,490.50,Services,Tourism Services
+INV-2024-008,2024-01-22,London Traders,GB,GB111222333,1200.00,0.23,276.00,1476.00,Goods,Office Supplies
+INV-2024-009,2024-01-23,Limerick Foods,IE,IE8642097C,600.00,0.135,81.00,681.00,Services,Food Services
+INV-2024-010,2024-01-24,Amsterdam BV,NL,NL999888777,2000.00,0.00,0.00,2000.00,Services,IT Services (Reverse Charge)
+INV-2024-011,2024-01-25,Waterford Manufacturing,IE,IE3691470D,5000.00,0.23,1150.00,6150.00,Goods,Manufacturing Equipment
+INV-2024-012,2024-01-26,Brussels SPRL,BE,BE444555666,1800.00,0.00,0.00,1800.00,Services,Legal Services (Reverse Charge)
+INV-2024-013,2024-01-27,Kilkenny Arts,IE,IE7531592E,350.00,0.09,31.50,381.50,Services,Cultural Event Admission
+INV-2024-014,2024-01-28,Madrid SL,ES,ES777888999,2200.00,0.23,506.00,2706.00,Goods,Electronic Components
+INV-2024-015,2024-01-29,Sligo Services,IE,IE1593578F,900.00,0.23,207.00,1107.00,Services,Business Consulting
+INV-2024-016,2024-01-30,Rome SRL,IT,IT333444555,1600.00,0.00,0.00,1600.00,Services,Design Services (Reverse Charge)
+INV-2024-017,2024-01-31,Tipperary Transport,IE,IE9517536G,750.00,0.135,101.25,851.25,Services,Logistics Services
+INV-2024-018,2024-02-01,Lisbon Lda,PT,PT666777888,1100.00,0.23,253.00,1353.00,Goods,Printed Materials
+INV-2024-019,2024-02-02,Wexford Web,IE,IE3578912H,1300.00,0.23,299.00,1599.00,Services,Web Hosting
+INV-2024-020,2024-02-03,Stockholm AB,SE,SE111333555,2800.00,0.00,0.00,2800.00,Services,Software Development (Reverse Charge)

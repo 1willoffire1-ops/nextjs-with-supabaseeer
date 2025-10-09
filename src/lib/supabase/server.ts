@@ -1,10 +1,8 @@
 import { createClient as createSupabaseClient } from '@supabase/supabase-js'
-import { createRouteHandlerClient } from '@supabase/auth-helpers-nextjs'
-import { cookies } from 'next/headers'
 import { Database } from '@/types/database'
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
-const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL!
+const supabaseServiceKey = import.meta.env.SUPABASE_SERVICE_ROLE_KEY!
 
 // Only validate environment variables at runtime, not build time
 function validateSupabaseConfig() {
@@ -32,11 +30,8 @@ export const supabaseAdmin = new Proxy({} as ReturnType<typeof createSupabaseCli
   }
 })
 
-// Client factory for route handlers with user authentication
-export async function createClient() {
-  const cookieStore = await cookies()
-  return createRouteHandlerClient<Database>({ cookies: () => cookieStore })
-}
+// Note: This file is kept for compatibility but most functionality 
+// should be moved to client-side code in a Vite app
 
 // Health score calculation with caching
 const healthScoreCache = new Map<string, { score: number; timestamp: number }>()

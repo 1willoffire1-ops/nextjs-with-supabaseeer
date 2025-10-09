@@ -1,8 +1,5 @@
-'use client'
-
 import { useState } from 'react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { Link, useLocation } from 'react-router-dom'
 import { 
   HomeIcon, 
   ChartBarIcon, 
@@ -88,7 +85,8 @@ interface NavigationProps {
 }
 
 export default function Navigation({ collapsed = false, onToggleCollapse }: NavigationProps) {
-  const pathname = usePathname()
+  const location = useLocation()
+  const pathname = location.pathname
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
@@ -131,7 +129,7 @@ export default function Navigation({ collapsed = false, onToggleCollapse }: Navi
               return (
                 <Link
                   key={item.name}
-                  href={item.href}
+                  to={item.href}
                   className={`group flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                     isActive
                       ? 'bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-200'
@@ -166,7 +164,7 @@ export default function Navigation({ collapsed = false, onToggleCollapse }: Navi
               return (
                 <Link
                   key={item.name}
-                  href={item.href}
+                  to={item.href}
                   className={`group flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                     isActive
                       ? 'bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-200'
@@ -254,7 +252,7 @@ export default function Navigation({ collapsed = false, onToggleCollapse }: Navi
                     return (
                       <Link
                         key={item.name}
-                        href={item.href}
+                        to={item.href}
                         onClick={() => setMobileMenuOpen(false)}
                         className={`group flex items-center px-3 py-2 text-sm font-medium rounded-md ${
                           isActive
@@ -283,7 +281,7 @@ export default function Navigation({ collapsed = false, onToggleCollapse }: Navi
                     return (
                       <Link
                         key={item.name}
-                        href={item.href}
+                        to={item.href}
                         onClick={() => setMobileMenuOpen(false)}
                         className={`group flex items-center px-3 py-2 text-sm font-medium rounded-md ${
                           isActive
