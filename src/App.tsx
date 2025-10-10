@@ -26,6 +26,7 @@ function AppContent() {
   const location = useLocation();
   const isDashboard = location.pathname === '/dashboard';
   const isFiling = location.pathname === '/filing';
+  const isAnalytics = location.pathname === '/analytics';
   
   const routes = (
     <Routes>
@@ -48,8 +49,8 @@ function AppContent() {
     </Routes>
   );
   
-  if (isDashboard || isFiling) {
-    // Dashboard and Filing have their own layouts
+  if (isDashboard || isFiling || isAnalytics) {
+    // Dashboard, Filing, and Analytics have their own layouts
     return routes;
   }
   
