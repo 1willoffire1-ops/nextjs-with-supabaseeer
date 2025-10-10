@@ -23,7 +23,6 @@ import ThemeDemo from './pages/ThemeDemo';
 function App() {
   return (
     <ThemeProvider
-      attribute="class"
       defaultTheme="system"
       enableSystem
     >

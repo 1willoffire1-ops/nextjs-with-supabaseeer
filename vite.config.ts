@@ -1,26 +1,28 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import path from 'path'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
 
-// https://vitejs.dev/config/
+// Minimal Vite config (CJS-friendly) to avoid ESM-only plugin issues
 export default defineConfig({
   plugins: [react({})],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
+      '@': path.resolve(process.cwd(), 'src'),
     },
   },
   server: {
-    port: 3000,
-    open: true,
+    host: '::',
+    port: 8080,
   },
   build: {
     outDir: 'dist',
     sourcemap: true,
   },
   define: {
-    // Replace process.env with import.meta.env for Vite
     global: 'globalThis',
+  },
+  esbuild: {
+    jsxInject: `import React from 'react'`,
   },
   optimizeDeps: {
     include: ['react', 'react-dom'],
