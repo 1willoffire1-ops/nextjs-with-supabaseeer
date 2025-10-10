@@ -20,6 +20,9 @@ export default defineConfig({
   define: {
     global: 'globalThis',
   },
+  esbuild: {
+    jsxInject: `import React from 'react'`,
+  },
   optimizeDeps: {
     include: ['react', 'react-dom'],
   },
