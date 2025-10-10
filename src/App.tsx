@@ -25,6 +25,7 @@ import ThemeDemo from './pages/ThemeDemo';
 function AppContent() {
   const location = useLocation();
   const isDashboard = location.pathname === '/dashboard';
+  const isFiling = location.pathname === '/filing';
   
   const routes = (
     <Routes>
@@ -47,8 +48,8 @@ function AppContent() {
     </Routes>
   );
   
-  if (isDashboard) {
-    // Dashboard has its own layout with sidebar
+  if (isDashboard || isFiling) {
+    // Dashboard and Filing have their own layouts
     return routes;
   }
   
